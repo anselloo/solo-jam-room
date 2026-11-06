@@ -479,7 +479,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Genre Flip (public-domain tune list with validation)
 - [x] Song Sprint with saved notes
 - [x] Stats tracking and Profile stats view
-- [ ] Daily Jam with streaks
+- [x] Daily Jam with streaks
 
 ### Milestone 5 — Polish and ship
 - [ ] Animations and reduced-motion fallbacks across all games

@@ -2,7 +2,9 @@ import { GENRES, genreById } from '../../audio/band/grooves';
 import { Deck } from '../../random/deck';
 import { createRng, type Rng } from '../../random/rng';
 import { daysBetween } from '../../state/stats';
+import { realizeRoman, type Chord } from '../../theory/chords';
 import { noteName } from '../../theory/notes';
+import { vampProgression } from '../../theory/vamps';
 import { keyRootsFor, type ScaleId } from '../../theory/scales';
 import { CARDS, type ConstraintCard } from '../constraints/deck';
 import { deal, type Deal } from '../progressions/deal';
@@ -231,4 +233,10 @@ export function dailyChallenge(date: string): DailyChallenge {
       };
     }
   }
+}
+
+/** The chords the band plays for a challenge: its dealt changes, or a loop in the key and mode. */
+export function bandChords(band: DailyBand): Chord[] {
+  const key = { root: keyRootsFor(band.mode)[band.keyPc], mode: band.mode };
+  return band.romans ? band.romans.map((r) => realizeRoman(r, key)) : vampProgression(key, true);
 }

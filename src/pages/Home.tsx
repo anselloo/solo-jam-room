@@ -1,9 +1,18 @@
 import { unlockAudio } from '../audio/engine';
 import { GameCard } from '../components/GameCard';
 import { href } from '../router';
+import { dailyChallenge } from '../games/daily/daily';
+import { useToday } from '../games/daily/DailyPage';
+import { useApp } from '../state/AppState';
+import { currentStreak, isDailyDone } from '../state/stats';
 import { DAILY, GAMES } from '../routes';
 
 export function Home() {
+  const { stats } = useApp();
+  const today = useToday();
+  const challenge = dailyChallenge(today);
+  const streak = currentStreak(stats.daily.done, today);
+  const done = isDailyDone(stats, today);
   return (
     <div>
       <section className="hero" aria-labelledby="hero-title">
@@ -27,14 +36,14 @@ export function Home() {
             <span aria-hidden="true">{DAILY.icon} </span>
             {DAILY.title}
           </h2>
-          <p className="muted">{DAILY.blurb}</p>
+          <p className="muted">{done ? 'Done for today. See you tomorrow!' : challenge.summary}</p>
         </div>
         <div>
-          <div className="streak" aria-label="Current streak: 0 days">
-            0 <span className="muted">day streak</span>
+          <div className="streak" aria-label={`Current streak: ${streak} days`}>
+            {streak} <span className="muted">day streak</span>
           </div>
           <a className="btn" href={href(DAILY.path)}>
-            See today&apos;s challenge
+            {done ? 'View today' : "See today's challenge"}
           </a>
         </div>
       </section>

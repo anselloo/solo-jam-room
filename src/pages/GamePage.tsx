@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react';
 import { ConstraintCardsPage } from '../games/constraints/ConstraintCardsPage';
+import { DailyPage } from '../games/daily/DailyPage';
 import { GenreFlipPage } from '../games/genre-flip/GenreFlipPage';
 import { HoldThePulsePage } from '../games/hold-the-pulse/HoldThePulsePage';
 import { MissingMemberPage } from '../games/missing-member/MissingMemberPage';
@@ -19,6 +20,7 @@ const IMPLEMENTED: Record<string, ComponentType> = {
   '/hold-the-pulse': HoldThePulsePage,
   '/genre-flip': GenreFlipPage,
   '/song-sprint': SongSprintPage,
+  '/daily': DailyPage,
   '/constraints': ConstraintCardsPage,
 };
 
