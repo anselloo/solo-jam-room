@@ -482,7 +482,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Daily Jam with streaks
 
 ### Milestone 5 — Polish and ship
-- [ ] Animations and reduced-motion fallbacks across all games
+- [x] Animations and reduced-motion fallbacks across all games
 - [x] Accessibility pass (axe checks, keyboard-only run-through, live regions)
 - [x] Service worker for offline use, web app manifest, icons
 - [x] Playwright smoke tests
