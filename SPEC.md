@@ -467,7 +467,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Glitch-free looping and tempo changes
 
 ### Milestone 3 — Core games (MVP)
-- [ ] Jam Roulette (with backing)
+- [x] Jam Roulette (with backing)
 - [ ] Trade Fours (incl. echo variant)
 - [ ] Chord Progression Dealer (incl. Changes Challenge, capo and transposition)
 - [x] Constraint Cards with ≥ 60 cards and overlay mode

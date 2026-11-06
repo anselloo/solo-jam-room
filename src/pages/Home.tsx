@@ -1,3 +1,4 @@
+import { unlockAudio } from '../audio/engine';
 import { GameCard } from '../components/GameCard';
 import { href } from '../router';
 import { DAILY, GAMES } from '../routes';
@@ -8,7 +9,14 @@ export function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <h1 id="hero-title">Solo Jam Room</h1>
         <p>Your band is always here. Pick up your instrument, and we&apos;ll deal the rest.</p>
-        <a className="btn btn--primary" href={href('/roulette')}>
+        <a
+          className="btn btn--primary"
+          href={href('/roulette') + '?autostart=1'}
+          onClick={() => {
+            // Unlock audio inside the click so the band can start on arrival (required by iOS).
+            void unlockAudio().catch(() => undefined);
+          }}
+        >
           Start Jamming
         </a>
       </section>
