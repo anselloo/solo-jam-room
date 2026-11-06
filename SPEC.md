@@ -476,7 +476,7 @@ ci: deploy to GitHub Pages on push to main
 ### Milestone 4 — More games and progress
 - [x] Missing Member
 - [x] Hold the Pulse
-- [ ] Genre Flip (public-domain tune list with validation)
+- [x] Genre Flip (public-domain tune list with validation)
 - [ ] Song Sprint with saved notes
 - [x] Stats tracking and Profile stats view
 - [ ] Daily Jam with streaks
