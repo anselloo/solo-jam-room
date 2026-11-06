@@ -2,12 +2,14 @@ import type { ComponentType } from 'react';
 import { ConstraintCardsPage } from '../games/constraints/ConstraintCardsPage';
 import { ProgressionsPage } from '../games/progressions/ProgressionsPage';
 import { RoulettePage } from '../games/roulette/RoulettePage';
+import { TradeFoursPage } from '../games/trade-fours/TradeFoursPage';
 import type { GameInfo } from '../routes';
 import { Placeholder } from './Placeholder';
 
 /** Games that have been built. Anything else shows a placeholder. */
 const IMPLEMENTED: Record<string, ComponentType> = {
   '/roulette': RoulettePage,
+  '/trade-fours': TradeFoursPage,
   '/progressions': ProgressionsPage,
   '/constraints': ConstraintCardsPage,
 };
