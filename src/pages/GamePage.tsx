@@ -4,6 +4,7 @@ import { GenreFlipPage } from '../games/genre-flip/GenreFlipPage';
 import { HoldThePulsePage } from '../games/hold-the-pulse/HoldThePulsePage';
 import { MissingMemberPage } from '../games/missing-member/MissingMemberPage';
 import { ProgressionsPage } from '../games/progressions/ProgressionsPage';
+import { SongSprintPage } from '../games/song-sprint/SongSprintPage';
 import { RoulettePage } from '../games/roulette/RoulettePage';
 import { TradeFoursPage } from '../games/trade-fours/TradeFoursPage';
 import type { GameInfo } from '../routes';
@@ -17,6 +18,7 @@ const IMPLEMENTED: Record<string, ComponentType> = {
   '/missing-member': MissingMemberPage,
   '/hold-the-pulse': HoldThePulsePage,
   '/genre-flip': GenreFlipPage,
+  '/song-sprint': SongSprintPage,
   '/constraints': ConstraintCardsPage,
 };
 

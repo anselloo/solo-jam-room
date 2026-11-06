@@ -275,3 +275,10 @@
   touch-action: manipulation;
   user-select: none;
 }
+
+.notes-box {
+  min-height: 220px;
+  padding: var(--space-3);
+  resize: vertical;
+  line-height: 1.5;
+}
