@@ -471,7 +471,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Trade Fours (incl. echo variant)
 - [x] Chord Progression Dealer (incl. Changes Challenge, capo and transposition)
 - [x] Constraint Cards with ≥ 60 cards and overlay mode
-- [ ] Data-file schema validation test
+- [x] Data-file schema validation test
 
 ### Milestone 4 — More games and progress
 - [ ] Missing Member
