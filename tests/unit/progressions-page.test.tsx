@@ -53,9 +53,11 @@ describe('Chord Progression Dealer page', () => {
     const first = cards()[0];
     expect(within(first).getAllByText(/./).length).toBeGreaterThan(1);
     await user.selectOptions(screen.getByLabelText('Show'), 'roman');
-    expect(within(cards()[0]).queryByText('B♭')).toBeNull();
+    const list = screen.getByRole('list', { name: /chord progression/i });
+    expect(within(list).queryByText('B♭')).toBeNull();
     await user.selectOptions(screen.getByLabelText('Show'), 'names');
-    expect(within(cards()[0]).getByText('B♭')).toBeTruthy();
+    // Every beginner template contains the I chord, but not always first.
+    expect(within(list).getAllByText('B♭').length).toBeGreaterThan(0);
   });
 
   it('re-deals just one chord', async () => {
