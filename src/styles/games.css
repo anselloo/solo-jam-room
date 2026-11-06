@@ -267,3 +267,11 @@
 [data-focus='true'] .timer__digits {
   font-size: clamp(6rem, 24vw, 18rem);
 }
+
+.tap-pad {
+  min-width: min(320px, 70vw);
+  min-height: 110px;
+  font-size: 3rem;
+  touch-action: manipulation;
+  user-select: none;
+}

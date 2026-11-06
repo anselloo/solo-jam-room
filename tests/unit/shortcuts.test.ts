@@ -39,3 +39,12 @@ describe('shortcut targeting', () => {
     expect(shouldHandle('primary', button, 'PageDown')).toBe(true);
   });
 });
+
+describe('non-element key targets', () => {
+  it('treats window and document as neither text entry nor activatable', () => {
+    expect(isTextEntry(window)).toBe(false);
+    expect(isActivatable(window)).toBe(false);
+    expect(isTextEntry(document)).toBe(false);
+    expect(shouldHandle('primary', window, ' ')).toBe(true);
+  });
+});

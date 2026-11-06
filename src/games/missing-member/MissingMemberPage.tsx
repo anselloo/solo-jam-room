@@ -159,11 +159,14 @@ export function MissingMemberPage() {
     setJam(j);
     roles.current = [];
     const first = roleFor(0);
-    // Roll a groove and, if asked, a tempo that suits it and the player's level.
-    const genre = rng.pick(GENRES);
-    transport.setGrooveId(genre.groove);
     transport.setSignature(signatureOf('4/4'));
-    if (rollTempo) transport.setBpm(pickTempo(rng, DIFFICULTY[level], genreById(genre.id)));
+    if (rollTempo) {
+      // Roll a groove, and a tempo that suits it and the player's level. Otherwise the dock's
+      // tempo and groove are used as they are.
+      const genre = rng.pick(GENRES);
+      transport.setGrooveId(genre.groove);
+      transport.setBpm(pickTempo(rng, DIFFICULTY[level], genreById(genre.id)));
+    }
     transport.setProgression(
       vampProgression({ root: keyRootsFor(m)[k], mode: m }, level !== 'beginner'),
       1,

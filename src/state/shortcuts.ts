@@ -26,8 +26,9 @@ export function useAction(action: ShortcutAction, handler: () => void): void {
 const TEXT_TAGS = new Set(['INPUT', 'TEXTAREA', 'SELECT']);
 
 /** Elements where typing (or arrow keys) belongs to the control, not to global shortcuts. */
-export function isTextEntry(el: Element | null): boolean {
-  if (!el) return false;
+export function isTextEntry(el: EventTarget | null): boolean {
+  // Key events can target window or document, which are not elements.
+  if (!(el instanceof Element)) return false;
   if (el instanceof HTMLInputElement) {
     return !['checkbox', 'radio', 'button', 'submit', 'range'].includes(el.type);
   }
@@ -35,8 +36,8 @@ export function isTextEntry(el: Element | null): boolean {
 }
 
 /** Elements that natively consume Space/Enter as a click. */
-export function isActivatable(el: Element | null): boolean {
-  if (!el) return false;
+export function isActivatable(el: EventTarget | null): boolean {
+  if (!(el instanceof Element)) return false;
   return (
     ['BUTTON', 'A', 'SUMMARY'].includes(el.tagName) ||
     el.getAttribute('role') === 'button' ||
@@ -49,7 +50,11 @@ export function isActivatable(el: Element | null): boolean {
  * Escape always works; typing in fields suppresses everything else; Space/Enter on a focused
  * button keeps its native click instead of triggering the primary action twice.
  */
-export function shouldHandle(action: ShortcutAction, target: Element | null, key: string): boolean {
+export function shouldHandle(
+  action: ShortcutAction,
+  target: EventTarget | null,
+  key: string,
+): boolean {
   if (action === 'escape') return true;
   if (isTextEntry(target)) return false;
   if (action === 'primary' && isActivatable(target) && (key === ' ' || key === 'Enter')) {

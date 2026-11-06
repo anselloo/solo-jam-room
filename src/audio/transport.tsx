@@ -110,6 +110,10 @@ export function TransportProvider({ children }: { children: ReactNode }) {
   const clickRef = useRef(clickOn);
   const bandOnRef = useRef(bandOn);
   const countInRef = useRef(0);
+  // The latest tempo and meter, readable synchronously. A game often sets them and calls start()
+  // in the same handler, before React has re-rendered with the new state.
+  const bpmRef = useRef(100);
+  const signatureRef = useRef<TimeSignature>(TIME_SIGNATURES[0]);
   const taps = useRef<number[]>([]);
   const visualTimers = useRef<number[]>([]);
   const extra = useRef(new Set<BeatListener>());
@@ -162,11 +166,13 @@ export function TransportProvider({ children }: { children: ReactNode }) {
 
   const setBpm = useCallback((value: number) => {
     const next = clampBpm(value);
+    bpmRef.current = next;
     setBpmState(next);
     scheduler.current?.setTempo(next);
   }, []);
 
   const setSignature = useCallback((sig: TimeSignature) => {
+    signatureRef.current = sig;
     setSignatureState(sig);
     scheduler.current?.setSignature(sig);
   }, []);
@@ -177,12 +183,12 @@ export function TransportProvider({ children }: { children: ReactNode }) {
       ensureBand();
       const s = getScheduler();
       countInRef.current = options.countIn ?? 1;
-      s.setTempo(bpm);
-      s.setSignature(signature);
+      s.setTempo(bpmRef.current);
+      s.setSignature(signatureRef.current);
       s.start();
       setRunning(true);
     },
-    [bpm, signature, getScheduler, ensureBand],
+    [getScheduler, ensureBand],
   );
 
   const stop = useCallback(() => {

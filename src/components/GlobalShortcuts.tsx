@@ -16,7 +16,7 @@ export function GlobalShortcuts() {
       // The Settings page sets this while waiting for a new key binding.
       if (document.body.dataset.capturing === 'true') return;
       const action = actionForKey(e.key, settings.shortcuts);
-      if (!action || !shouldHandle(action, e.target as Element | null, e.key)) return;
+      if (!action || !shouldHandle(action, e.target, e.key)) return;
       e.preventDefault();
 
       switch (action) {
