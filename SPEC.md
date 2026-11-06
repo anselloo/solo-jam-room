@@ -470,7 +470,7 @@ ci: deploy to GitHub Pages on push to main
 - [ ] Jam Roulette (with backing)
 - [ ] Trade Fours (incl. echo variant)
 - [ ] Chord Progression Dealer (incl. Changes Challenge, capo and transposition)
-- [ ] Constraint Cards with ≥ 60 cards and overlay mode
+- [x] Constraint Cards with ≥ 60 cards and overlay mode
 - [ ] Data-file schema validation test
 
 ### Milestone 4 — More games and progress

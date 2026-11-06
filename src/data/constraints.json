@@ -1,0 +1,432 @@
+[
+  {
+    "id": "c001",
+    "text": "Only three notes allowed.",
+    "category": "notes",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c002",
+    "text": "Play just two notes, and make them count.",
+    "category": "notes",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c003",
+    "text": "Use only the root and the fifth.",
+    "category": "notes",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c004",
+    "text": "Stay on one single note for the whole first half, then break free.",
+    "category": "notes",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c005",
+    "text": "Only notes from the pentatonic scale.",
+    "category": "notes",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c006",
+    "text": "Every phrase must end on the root.",
+    "category": "notes",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c007",
+    "text": "No note may repeat twice in a row.",
+    "category": "notes",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c008",
+    "text": "Avoid the root completely. Circle around it without landing.",
+    "category": "notes",
+    "difficulty": "hard"
+  },
+  {
+    "id": "c009",
+    "text": "Play only the chord tones of whatever chord you imagine underneath.",
+    "category": "notes",
+    "difficulty": "hard"
+  },
+  {
+    "id": "c010",
+    "text": "Pick a favourite note and come back to it at the start of every phrase.",
+    "category": "notes",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c011",
+    "text": "Only play on the off-beats.",
+    "category": "rhythm",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c012",
+    "text": "Play only on beat one of each bar.",
+    "category": "rhythm",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c013",
+    "text": "Quarter notes only. Steady as a heartbeat.",
+    "category": "rhythm",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c014",
+    "text": "Use only short, detached notes.",
+    "category": "rhythm",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c015",
+    "text": "Leave a full bar of silence after every phrase.",
+    "category": "rhythm",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c016",
+    "text": "Every phrase starts on the \"and\" of beat two.",
+    "category": "rhythm",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c017",
+    "text": "Play in triplets against the straight beat.",
+    "category": "rhythm",
+    "difficulty": "hard"
+  },
+  {
+    "id": "c018",
+    "text": "Phrase in groups of five, ignoring the bar line.",
+    "category": "rhythm",
+    "difficulty": "hard"
+  },
+  {
+    "id": "c019",
+    "text": "Repeat one rhythm for the entire jam and only change the notes.",
+    "category": "rhythm",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c020",
+    "text": "Call and answer yourself: two short notes, then rest, then two more.",
+    "category": "rhythm",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c021",
+    "text": "Start at a whisper and build over 8 bars.",
+    "category": "dynamics",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c022",
+    "text": "Play as quietly as you possibly can.",
+    "category": "dynamics",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c023",
+    "text": "Alternate loud and soft every bar.",
+    "category": "dynamics",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c024",
+    "text": "Start loud and fade to nothing over 8 bars.",
+    "category": "dynamics",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c025",
+    "text": "Play the whole thing at medium-soft, like a late-night conversation.",
+    "category": "dynamics",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c026",
+    "text": "Crescendo on every held note, then cut off clean.",
+    "category": "dynamics",
+    "difficulty": "hard"
+  },
+  {
+    "id": "c027",
+    "text": "Build to one huge moment, then drop to silence.",
+    "category": "dynamics",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c028",
+    "text": "Accent every first beat and keep the rest gentle.",
+    "category": "dynamics",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c029",
+    "text": "Stay in the lowest octave you can play.",
+    "category": "register",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c030",
+    "text": "Stay in the highest octave you can play.",
+    "category": "register",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c031",
+    "text": "Start low and climb a little higher every four bars.",
+    "category": "register",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c032",
+    "text": "Never move more than two steps at a time.",
+    "category": "register",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c033",
+    "text": "Only leap: every interval must be a third or bigger.",
+    "category": "register",
+    "difficulty": "hard"
+  },
+  {
+    "id": "c034",
+    "text": "Stay inside a span of five notes.",
+    "category": "register",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c035",
+    "text": "Alternate between your lowest and highest comfortable range every phrase.",
+    "category": "register",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c036",
+    "text": "Use only your weaker hand for the picking, strumming or fingering you normally lead with.",
+    "category": "technique",
+    "difficulty": "easy",
+    "instruments": ["guitar", "ukulele", "bass", "piano", "violin"]
+  },
+  {
+    "id": "c037",
+    "text": "No open strings.",
+    "category": "technique",
+    "difficulty": "medium",
+    "instruments": ["guitar", "bass", "ukulele", "violin"]
+  },
+  {
+    "id": "c038",
+    "text": "Only open strings, plus the occasional octave harmonic if you dare.",
+    "category": "technique",
+    "difficulty": "medium",
+    "instruments": ["guitar", "bass", "ukulele", "violin"]
+  },
+  {
+    "id": "c039",
+    "text": "Only one hand on the keys. Pick whichever you like.",
+    "category": "technique",
+    "difficulty": "easy",
+    "instruments": ["piano"]
+  },
+  {
+    "id": "c040",
+    "text": "Play with your left hand only.",
+    "category": "technique",
+    "difficulty": "medium",
+    "instruments": ["piano"]
+  },
+  {
+    "id": "c041",
+    "text": "Slide into every note.",
+    "category": "technique",
+    "difficulty": "medium",
+    "instruments": ["guitar", "bass", "violin", "trombone"]
+  },
+  {
+    "id": "c042",
+    "text": "Use only hammer-ons and pull-offs: no picking after the first note of a phrase.",
+    "category": "technique",
+    "difficulty": "medium",
+    "instruments": ["guitar", "bass"]
+  },
+  {
+    "id": "c043",
+    "text": "Play every note with a slap or a pop, as percussive as you can.",
+    "category": "technique",
+    "difficulty": "easy",
+    "instruments": ["bass"]
+  },
+  {
+    "id": "c044",
+    "text": "Use rim clicks and cross-sticks only. No cymbals.",
+    "category": "technique",
+    "difficulty": "medium",
+    "instruments": ["drums"]
+  },
+  {
+    "id": "c045",
+    "text": "Play the whole thing with brushes or fingers, no sticks.",
+    "category": "technique",
+    "difficulty": "medium",
+    "instruments": ["drums"]
+  },
+  {
+    "id": "c046",
+    "text": "Keep the hi-hat or ride going with your foot and hand while the other hand tells a story.",
+    "category": "technique",
+    "difficulty": "hard",
+    "instruments": ["drums"]
+  },
+  {
+    "id": "c047",
+    "text": "Breathe only at the end of four-bar phrases.",
+    "category": "technique",
+    "difficulty": "easy",
+    "instruments": [
+      "altoSax",
+      "tenorSax",
+      "baritoneSax",
+      "trumpet",
+      "clarinet",
+      "flute",
+      "horn",
+      "trombone",
+      "voice"
+    ]
+  },
+  {
+    "id": "c048",
+    "text": "Use only long tones, each held for at least two beats.",
+    "category": "technique",
+    "difficulty": "medium",
+    "instruments": [
+      "altoSax",
+      "tenorSax",
+      "baritoneSax",
+      "trumpet",
+      "clarinet",
+      "flute",
+      "horn",
+      "trombone",
+      "voice"
+    ]
+  },
+  {
+    "id": "c049",
+    "text": "Sing or hum every note before you play it.",
+    "category": "technique",
+    "difficulty": "medium",
+    "instruments": ["guitar", "piano", "bass", "ukulele", "violin"]
+  },
+  {
+    "id": "c050",
+    "text": "Use vibrato on every note that lasts longer than a beat.",
+    "category": "technique",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c051",
+    "text": "Play every note staccato, light and bouncy.",
+    "category": "technique",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c052",
+    "text": "Play every note legato, as smooth as you can.",
+    "category": "technique",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c053",
+    "text": "Play it like a lullaby.",
+    "category": "wild",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c054",
+    "text": "Play like you are walking on tiptoe past a sleeping dragon.",
+    "category": "wild",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c055",
+    "text": "Play as if the sun is just coming up.",
+    "category": "wild",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c056",
+    "text": "Tell a story with no words: a beginning, a problem, and a happy ending.",
+    "category": "wild",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c057",
+    "text": "Play like a robot learning to dance.",
+    "category": "wild",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c058",
+    "text": "Imitate a thunderstorm rolling in, then passing.",
+    "category": "wild",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c059",
+    "text": "Play the angriest happy music you can.",
+    "category": "wild",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c060",
+    "text": "Play like you are underwater.",
+    "category": "wild",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c061",
+    "text": "Pretend the next note is your very last. Make it mean something.",
+    "category": "wild",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c062",
+    "text": "Copy the sound of a bird: short chirps and long calls.",
+    "category": "wild",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c063",
+    "text": "Play a different character each bar: a villain, a hero, a ghost, a clown.",
+    "category": "wild",
+    "difficulty": "hard"
+  },
+  {
+    "id": "c064",
+    "text": "Play like you are a little bit bored and a little bit amazing.",
+    "category": "wild",
+    "difficulty": "easy"
+  },
+  {
+    "id": "c065",
+    "text": "Make every phrase a question that never quite gets answered.",
+    "category": "wild",
+    "difficulty": "medium"
+  },
+  {
+    "id": "c066",
+    "text": "Play it sweet, then play it sour, then play it sweet again.",
+    "category": "wild",
+    "difficulty": "easy"
+  }
+]

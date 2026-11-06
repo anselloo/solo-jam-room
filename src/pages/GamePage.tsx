@@ -1,8 +1,16 @@
+import type { ComponentType } from 'react';
+import { ConstraintCardsPage } from '../games/constraints/ConstraintCardsPage';
 import type { GameInfo } from '../routes';
 import { Placeholder } from './Placeholder';
 
-/** Stand-in shown until each game is built. */
+/** Games that have been built. Anything else shows a placeholder. */
+const IMPLEMENTED: Record<string, ComponentType> = {
+  '/constraints': ConstraintCardsPage,
+};
+
 export function GamePage({ game }: { game: GameInfo }) {
+  const Impl = IMPLEMENTED[game.path];
+  if (Impl) return <Impl />;
   return (
     <Placeholder title={game.title} icon={game.icon}>
       <p>{game.blurb}</p>
