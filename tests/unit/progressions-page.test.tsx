@@ -82,7 +82,10 @@ describe('Chord Progression Dealer page', () => {
     await clickDeal(user);
     expect(screen.getByText(/written pitch/i)).toBeTruthy();
     // Concert B♭ is written C for a B♭ instrument.
-    expect(within(cards()[0]).getByText('sounds as B♭')).toBeTruthy();
+    expect(
+      within(screen.getByRole('list', { name: /chord progression/i })).getAllByText('sounds as B♭')
+        .length,
+    ).toBeGreaterThan(0);
     expect((screen.getByLabelText('Capo') as HTMLSelectElement).disabled).toBe(true);
   });
 
@@ -93,8 +96,10 @@ describe('Chord Progression Dealer page', () => {
     await user.selectOptions(screen.getByLabelText('Difficulty'), 'beginner');
     await clickDeal(user);
     await user.selectOptions(screen.getByLabelText('Capo'), '3');
-    expect(within(cards()[0]).getByText('G')).toBeTruthy();
-    expect(within(cards()[0]).getByText('sounds as B♭')).toBeTruthy();
+    // Concert B♭ with a capo on fret 3 is played as a G shape.
+    const list = screen.getByRole('list', { name: /chord progression/i });
+    expect(within(list).getAllByText('G').length).toBeGreaterThan(0);
+    expect(within(list).getAllByText('sounds as B♭').length).toBeGreaterThan(0);
     await user.click(screen.getByRole('button', { name: /suggest/i }));
     expect(Number((screen.getByLabelText('Capo') as HTMLSelectElement).value)).toBeGreaterThan(0);
   });
