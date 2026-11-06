@@ -1,0 +1,130 @@
+[
+  {
+    "id": "guitar",
+    "name": "Guitar",
+    "transposition": "C",
+    "range": "E2-E6",
+    "roles": ["chords", "lead", "bass"],
+    "family": "strings"
+  },
+  {
+    "id": "bass",
+    "name": "Bass",
+    "transposition": "C",
+    "range": "E1-G4",
+    "roles": ["bass"],
+    "family": "strings"
+  },
+  {
+    "id": "piano",
+    "name": "Piano / keys",
+    "transposition": "C",
+    "range": "A0-C8",
+    "roles": ["chords", "lead", "bass"],
+    "family": "keys"
+  },
+  {
+    "id": "drums",
+    "name": "Drums / percussion",
+    "transposition": "C",
+    "range": "unpitched",
+    "roles": ["drums"],
+    "family": "percussion"
+  },
+  {
+    "id": "voice",
+    "name": "Voice",
+    "transposition": "C",
+    "range": "E2-C6",
+    "roles": ["lead"],
+    "family": "voice"
+  },
+  {
+    "id": "violin",
+    "name": "Violin / fiddle",
+    "transposition": "C",
+    "range": "G3-E7",
+    "roles": ["lead"],
+    "family": "strings"
+  },
+  {
+    "id": "ukulele",
+    "name": "Ukulele",
+    "transposition": "C",
+    "range": "C4-A5",
+    "roles": ["chords", "lead"],
+    "family": "strings"
+  },
+  {
+    "id": "altoSax",
+    "name": "Alto saxophone",
+    "transposition": "Eb",
+    "range": "Db3-Ab5",
+    "roles": ["lead"],
+    "family": "winds"
+  },
+  {
+    "id": "baritoneSax",
+    "name": "Baritone saxophone",
+    "transposition": "Eb",
+    "range": "C2-F4",
+    "roles": ["lead", "bass"],
+    "family": "winds"
+  },
+  {
+    "id": "tenorSax",
+    "name": "Tenor saxophone",
+    "transposition": "Bb",
+    "range": "Ab2-E5",
+    "roles": ["lead"],
+    "family": "winds"
+  },
+  {
+    "id": "trumpet",
+    "name": "Trumpet",
+    "transposition": "Bb",
+    "range": "F#3-C6",
+    "roles": ["lead"],
+    "family": "brass"
+  },
+  {
+    "id": "clarinet",
+    "name": "Clarinet",
+    "transposition": "Bb",
+    "range": "D3-G6",
+    "roles": ["lead"],
+    "family": "winds"
+  },
+  {
+    "id": "horn",
+    "name": "French horn",
+    "transposition": "F",
+    "range": "B1-F5",
+    "roles": ["lead", "chords"],
+    "family": "brass"
+  },
+  {
+    "id": "trombone",
+    "name": "Trombone",
+    "transposition": "C",
+    "range": "E2-Bb4",
+    "roles": ["lead", "bass"],
+    "family": "brass"
+  },
+  {
+    "id": "flute",
+    "name": "Flute",
+    "transposition": "C",
+    "range": "C4-C7",
+    "roles": ["lead"],
+    "family": "winds"
+  },
+  {
+    "id": "other",
+    "name": "Something else",
+    "transposition": "C",
+    "range": "any",
+    "roles": ["lead", "chords"],
+    "family": "other"
+  }
+]
