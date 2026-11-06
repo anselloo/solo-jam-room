@@ -18,11 +18,14 @@ body {
   line-height: 1.5;
   color: var(--text);
   background-color: var(--bg);
-  /* Warm, slightly gritty rehearsal-room glow; low contrast so text stays readable. */
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgb(255 176 46 / 10%), transparent 70%),
-    repeating-linear-gradient(0deg, rgb(255 255 255 / 1.5%) 0 1px, transparent 1px 3px);
-  background-attachment: fixed;
+  /* Warm rehearsal-room glow, low contrast so text stays readable. Kept cheap to paint: no fixed
+     attachment and no full-screen repeating texture. */
+  background-image: radial-gradient(
+    ellipse 80% 50% at 50% -10%,
+    rgb(255 176 46 / 10%),
+    transparent 70%
+  );
+  background-repeat: no-repeat;
 }
 
 h1,

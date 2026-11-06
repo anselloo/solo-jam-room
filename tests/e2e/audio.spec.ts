@@ -4,6 +4,8 @@ import { expect, test, type Page } from '@playwright/test';
  * Runs the real Web Audio engine in Chromium. An analyser is tapped onto the destination so we can
  * measure what the player would actually hear, and the context clock is exposed for timing checks.
  */
+test.describe.configure({ mode: 'serial' });
+
 async function tapAudio(page: Page) {
   await page.addInitScript(() => {
     const w = window as unknown as Record<string, unknown>;

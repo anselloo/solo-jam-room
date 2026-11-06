@@ -2,8 +2,10 @@
 :root {
   color-scheme: dark;
 
-  --font-display: 'Bebas Neue', 'Oswald', 'Arial Narrow', Impact, 'Haettenschweiler', sans-serif;
-  --font-ui: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* Bebas Neue is bundled (SIL Open Font License), so it also works offline. Short stacks keep the
+     first layout cheap: every unavailable family in a stack costs a lookup. */
+  --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  --font-ui: system-ui, sans-serif;
 
   --bg: #161413;
   --bg-raised: #211e1c;
