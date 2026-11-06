@@ -107,6 +107,19 @@ describe('app shell', () => {
     expect(root.dataset.focus).toBe('true');
   });
 
+  it('mutes a band part and picks a groove from the dock mixer', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await skipOnboarding(user);
+    await user.click(screen.getByRole('button', { name: /mixer/i }));
+    const mute = screen.getByRole('button', { name: /mute drums/i });
+    expect(mute.getAttribute('aria-pressed')).toBe('false');
+    await user.click(mute);
+    expect(mute.getAttribute('aria-pressed')).toBe('true');
+    await user.selectOptions(screen.getByLabelText(/groove/i), 'reggae');
+    expect((screen.getByLabelText(/groove/i) as HTMLSelectElement).value).toBe('reggae');
+  });
+
   it('adjusts tempo from the dock', async () => {
     const user = userEvent.setup();
     render(<App />);

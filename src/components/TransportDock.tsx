@@ -1,6 +1,22 @@
 import { useState } from 'react';
-import { BAND_PARTS, MAX_BPM, MIN_BPM, useTransport, type BandPart } from '../audio/transport';
+import {
+  BAND_PARTS,
+  MAX_BPM,
+  MIN_BPM,
+  useTransport,
+  type BandPart,
+  type BeatPosition,
+} from '../audio/transport';
+import { GROOVES } from '../audio/band/grooves';
+import { chordSymbol } from '../theory/chords';
 import { TIME_SIGNATURES, signatureLabel } from '../audio/scheduler';
+
+function positionLabel(p: BeatPosition | null): string {
+  if (!p) return 'Stopped';
+  if (p.bar < 0) return `Count-in, beat ${p.beat + 1}`;
+  const chord = p.chord ? `, chord ${chordSymbol(p.chord)}` : '';
+  return `Bar ${p.bar + 1}, beat ${p.beat + 1}${chord}`;
+}
 
 const PART_LABEL: Record<BandPart, string> = { drums: 'Drums', bass: 'Bass', chords: 'Chords' };
 
@@ -78,13 +94,7 @@ export function TransportDock() {
         </select>
 
         {/* Visual pulse: every audio cue has a visual equivalent. */}
-        <div
-          className="dock__pulse"
-          role="img"
-          aria-label={
-            t.position ? `Bar ${t.position.bar + 1}, beat ${t.position.beat + 1}` : 'Stopped'
-          }
-        >
+        <div className="dock__pulse" role="img" aria-label={positionLabel(t.position)}>
           {Array.from({ length: t.signature.beats }, (_, i) => (
             <span
               key={`${signatureLabel(t.signature)}-${i}`}
@@ -94,6 +104,12 @@ export function TransportDock() {
             />
           ))}
         </div>
+
+        {t.position?.chord && (
+          <span className="dock__chord" aria-label="Current chord">
+            {chordSymbol(t.position.chord)}
+          </span>
+        )}
 
         <button
           type="button"
@@ -143,9 +159,31 @@ export function TransportDock() {
               />
             </div>
           ))}
-          <p className="muted" style={{ gridColumn: '1 / -1', margin: 0 }}>
-            The backing band arrives in the next update. For now the click keeps time.
-          </p>
+          <label className="row">
+            <input
+              type="checkbox"
+              checked={t.bandOn}
+              onChange={(e) => t.setBandOn(e.target.checked)}
+            />
+            Band
+          </label>
+          <div className="mixer-row">
+            <label htmlFor="groove" style={{ minWidth: 56 }}>
+              Groove
+            </label>
+            <select
+              id="groove"
+              className="input"
+              value={t.grooveId}
+              onChange={(e) => t.setGrooveId(e.target.value)}
+            >
+              {GROOVES.map((g) => (
+                <option key={g.id} value={g.id}>
+                  {g.name}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       )}
     </section>

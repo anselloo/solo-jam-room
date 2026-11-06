@@ -463,8 +463,8 @@ ci: deploy to GitHub Pages on push to main
 ### Milestone 2 — Backing band
 - [x] Synthesized drum kit, bass voice, chord pad, lead voice
 - [x] Groove patterns for each genre and time signature, with validity tests
-- [ ] Progression playback with per-part mixer and mute
-- [ ] Glitch-free looping and tempo changes
+- [x] Progression playback with per-part mixer and mute
+- [x] Glitch-free looping and tempo changes
 
 ### Milestone 3 — Core games (MVP)
 - [ ] Jam Roulette (with backing)
