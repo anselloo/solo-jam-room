@@ -2,6 +2,7 @@ import { TransportProvider } from './audio/transport';
 import { GlobalShortcuts } from './components/GlobalShortcuts';
 import { Header } from './components/Header';
 import { LiveRegion } from './components/LiveRegion';
+import { SessionTracker } from './components/SessionTracker';
 import { ShortcutHelp } from './components/ShortcutHelp';
 import { TransportDock } from './components/TransportDock';
 import { GamePage } from './pages/GamePage';
@@ -47,6 +48,7 @@ function Shell() {
         Skip to content
       </a>
       <GlobalShortcuts />
+      <SessionTracker />
       <LiveRegion />
       {focus && (
         <button type="button" className="btn focus-exit" onClick={() => setFocus(false)}>

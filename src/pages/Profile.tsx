@@ -1,3 +1,4 @@
+import { StatsView } from '../components/StatsView';
 import { ProfileForm } from '../components/ProfileForm';
 import { useApp } from '../state/AppState';
 
@@ -12,6 +13,7 @@ export function Profile() {
       <div className="card">
         <ProfileForm profile={profile} onChange={updateProfile} />
       </div>
+      <StatsView />
     </section>
   );
 }

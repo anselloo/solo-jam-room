@@ -478,7 +478,7 @@ ci: deploy to GitHub Pages on push to main
 - [ ] Hold the Pulse
 - [ ] Genre Flip (public-domain tune list with validation)
 - [ ] Song Sprint with saved notes
-- [ ] Stats tracking and Profile stats view
+- [x] Stats tracking and Profile stats view
 - [ ] Daily Jam with streaks
 
 ### Milestone 5 — Polish and ship

@@ -10,12 +10,16 @@ import {
 import { setMasterVolume, setMuted } from '../audio/engine';
 import { loadProfile, saveProfile, type Profile } from './profile';
 import { loadSettings, saveSettings, type Settings } from './settings';
+import { loadStats, saveStats, type Stats } from './stats';
 
 interface AppState {
   profile: Profile;
   updateProfile: (patch: Partial<Profile>) => void;
   settings: Settings;
   updateSettings: (patch: Partial<Settings>) => void;
+  stats: Stats;
+  /** Apply a pure update to the stats and persist the result. */
+  updateStats: (fn: (s: Stats) => Stats) => void;
   focus: boolean;
   setFocus: (on: boolean) => void;
   toggleFocus: () => void;
@@ -28,6 +32,7 @@ const Ctx = createContext<AppState | null>(null);
 export function AppStateProvider({ children }: { children: ReactNode }) {
   const [profile, setProfile] = useState<Profile>(loadProfile);
   const [settings, setSettings] = useState<Settings>(loadSettings);
+  const [stats, setStats] = useState<Stats>(loadStats);
   const [focus, setFocusState] = useState(false);
   const [helpOpen, setHelpOpen] = useState(false);
 
@@ -43,6 +48,14 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     setSettings((prev) => {
       const next = { ...prev, ...patch };
       saveSettings(next);
+      return next;
+    });
+  }, []);
+
+  const updateStats = useCallback((fn: (s: Stats) => Stats) => {
+    setStats((prev) => {
+      const next = fn(prev);
+      if (next !== prev) saveStats(next);
       return next;
     });
   }, []);
@@ -90,13 +103,26 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       updateProfile,
       settings,
       updateSettings,
+      stats,
+      updateStats,
       focus,
       setFocus,
       toggleFocus,
       helpOpen,
       setHelpOpen,
     }),
-    [profile, updateProfile, settings, updateSettings, focus, setFocus, toggleFocus, helpOpen],
+    [
+      profile,
+      updateProfile,
+      settings,
+      updateSettings,
+      stats,
+      updateStats,
+      focus,
+      setFocus,
+      toggleFocus,
+      helpOpen,
+    ],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
