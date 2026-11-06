@@ -1,0 +1,442 @@
+[
+  {
+    "id": "twinkle",
+    "title": "Twinkle, Twinkle, Little Star",
+    "origin": "French folk melody, 1700s",
+    "key": {
+      "root": "C",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional French air \"Ah! vous dirai-je, maman\", first published in 1761."
+  },
+  {
+    "id": "mary-lamb",
+    "title": "Mary Had a Little Lamb",
+    "origin": "American nursery rhyme, 1830s",
+    "key": {
+      "root": "C",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional nursery tune; the poem dates from 1830."
+  },
+  {
+    "id": "row-boat",
+    "title": "Row, Row, Row Your Boat",
+    "origin": "American round, 1800s",
+    "key": {
+      "root": "C",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional round, published in the 1850s."
+  },
+  {
+    "id": "ode-to-joy",
+    "title": "Ode to Joy",
+    "origin": "Beethoven, Ninth Symphony, 1824",
+    "key": {
+      "root": "D",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Ludwig van Beethoven (died 1827); the composition is long in the public domain."
+  },
+  {
+    "id": "greensleeves",
+    "title": "Greensleeves",
+    "origin": "English folk tune, late 1500s",
+    "key": {
+      "root": "E",
+      "mode": "minor"
+    },
+    "publicDomain": true,
+    "source": "Traditional English melody registered in 1580."
+  },
+  {
+    "id": "amazing-grace",
+    "title": "Amazing Grace",
+    "origin": "American hymn tune, 1800s",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional hymn tune (New Britain), published in 1835."
+  },
+  {
+    "id": "scarborough",
+    "title": "Scarborough Fair",
+    "origin": "English ballad, 1600s",
+    "key": {
+      "root": "D",
+      "mode": "dorian"
+    },
+    "publicDomain": true,
+    "source": "Traditional English ballad of at least the 17th century."
+  },
+  {
+    "id": "saints",
+    "title": "When the Saints Go Marching In",
+    "origin": "American spiritual, early 1900s",
+    "key": {
+      "root": "F",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional gospel and spiritual song, in the public domain."
+  },
+  {
+    "id": "oh-susanna",
+    "title": "Oh! Susanna",
+    "origin": "Stephen Foster, 1848",
+    "key": {
+      "root": "C",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Stephen Foster (died 1864); published in 1848."
+  },
+  {
+    "id": "camptown",
+    "title": "Camptown Races",
+    "origin": "Stephen Foster, 1850",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Stephen Foster (died 1864); published in 1850."
+  },
+  {
+    "id": "yankee-doodle",
+    "title": "Yankee Doodle",
+    "origin": "American and British folk tune, 1700s",
+    "key": {
+      "root": "C",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional tune of the 18th century."
+  },
+  {
+    "id": "auld-lang-syne",
+    "title": "Auld Lang Syne",
+    "origin": "Scottish folk song, 1788",
+    "key": {
+      "root": "F",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional Scottish melody; the poem was written by Robert Burns in 1788."
+  },
+  {
+    "id": "shenandoah",
+    "title": "Shenandoah",
+    "origin": "American river and sea song, early 1800s",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional American folk song of the early 19th century."
+  },
+  {
+    "id": "home-range",
+    "title": "Home on the Range",
+    "origin": "American cowboy song, 1870s",
+    "key": {
+      "root": "C",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional American song, first recorded in print in the 1870s."
+  },
+  {
+    "id": "swing-low",
+    "title": "Swing Low, Sweet Chariot",
+    "origin": "African American spiritual, 1860s",
+    "key": {
+      "root": "Eb",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional spiritual, in the public domain."
+  },
+  {
+    "id": "canon-d",
+    "title": "Canon in D",
+    "origin": "Johann Pachelbel, around 1680",
+    "key": {
+      "root": "D",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Johann Pachelbel (died 1706); the composition is long in the public domain."
+  },
+  {
+    "id": "minuet-g",
+    "title": "Minuet in G",
+    "origin": "Christian Petzold, around 1740",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Christian Petzold (died 1733); long in the public domain."
+  },
+  {
+    "id": "fur-elise",
+    "title": "Fur Elise",
+    "origin": "Ludwig van Beethoven, 1810",
+    "key": {
+      "root": "A",
+      "mode": "minor"
+    },
+    "publicDomain": true,
+    "source": "Ludwig van Beethoven (died 1827); long in the public domain."
+  },
+  {
+    "id": "moonlight",
+    "title": "Moonlight Sonata, first movement",
+    "origin": "Ludwig van Beethoven, 1801",
+    "key": {
+      "root": "C#",
+      "mode": "minor"
+    },
+    "publicDomain": true,
+    "source": "Ludwig van Beethoven (died 1827); long in the public domain."
+  },
+  {
+    "id": "nachtmusik",
+    "title": "Eine kleine Nachtmusik",
+    "origin": "Wolfgang Amadeus Mozart, 1787",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Wolfgang Amadeus Mozart (died 1791); long in the public domain."
+  },
+  {
+    "id": "mountain-king",
+    "title": "In the Hall of the Mountain King",
+    "origin": "Edvard Grieg, 1875",
+    "key": {
+      "root": "B",
+      "mode": "minor"
+    },
+    "publicDomain": true,
+    "source": "Edvard Grieg (died 1907); in the public domain."
+  },
+  {
+    "id": "william-tell",
+    "title": "William Tell Overture, finale",
+    "origin": "Gioachino Rossini, 1829",
+    "key": {
+      "root": "E",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Gioachino Rossini (died 1868); long in the public domain."
+  },
+  {
+    "id": "can-can",
+    "title": "Can-Can",
+    "origin": "Jacques Offenbach, 1858",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Jacques Offenbach (died 1880); from Orpheus in the Underworld, in the public domain."
+  },
+  {
+    "id": "jingle-bells",
+    "title": "Jingle Bells",
+    "origin": "James Lord Pierpont, 1857",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "James Lord Pierpont (died 1893); published in 1857."
+  },
+  {
+    "id": "silent-night",
+    "title": "Silent Night",
+    "origin": "Franz Gruber, 1818",
+    "key": {
+      "root": "Bb",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Franz Xaver Gruber (died 1863); composed in 1818."
+  },
+  {
+    "id": "wayfaring",
+    "title": "Wayfaring Stranger",
+    "origin": "American folk hymn, early 1800s",
+    "key": {
+      "root": "A",
+      "mode": "minor"
+    },
+    "publicDomain": true,
+    "source": "Traditional American folk hymn of the early 19th century."
+  },
+  {
+    "id": "water-wide",
+    "title": "The Water Is Wide",
+    "origin": "British folk song, 1600s",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional folk song with roots in the 17th century."
+  },
+  {
+    "id": "frere-jacques",
+    "title": "Frere Jacques",
+    "origin": "French nursery round, 1700s",
+    "key": {
+      "root": "F",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional French round of the 18th century."
+  },
+  {
+    "id": "london-bridge",
+    "title": "London Bridge Is Falling Down",
+    "origin": "English nursery rhyme, 1600s",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional English nursery rhyme and tune."
+  },
+  {
+    "id": "skip-lou",
+    "title": "Skip to My Lou",
+    "origin": "American play-party song, 1800s",
+    "key": {
+      "root": "C",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional American play-party song of the 19th century."
+  },
+  {
+    "id": "simple-gifts",
+    "title": "Simple Gifts",
+    "origin": "Shaker song, 1848",
+    "key": {
+      "root": "F",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Joseph Brackett (died 1882); a Shaker song of 1848."
+  },
+  {
+    "id": "waltzing-matilda",
+    "title": "Waltzing Matilda",
+    "origin": "Australian bush ballad, 1895",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional Australian ballad of 1895, adapted from an older Scottish air."
+  },
+  {
+    "id": "blue-danube",
+    "title": "The Blue Danube",
+    "origin": "Johann Strauss II, 1866",
+    "key": {
+      "root": "D",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Johann Strauss II (died 1899); long in the public domain."
+  },
+  {
+    "id": "brahms-lullaby",
+    "title": "Wiegenlied (Brahms Lullaby)",
+    "origin": "Johannes Brahms, 1868",
+    "key": {
+      "root": "Eb",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Johannes Brahms (died 1897); long in the public domain."
+  },
+  {
+    "id": "habanera",
+    "title": "Habanera",
+    "origin": "Georges Bizet, 1875",
+    "key": {
+      "root": "D",
+      "mode": "minor"
+    },
+    "publicDomain": true,
+    "source": "Georges Bizet (died 1875); from Carmen, in the public domain."
+  },
+  {
+    "id": "swan-lake",
+    "title": "Swan Lake theme",
+    "origin": "Pyotr Tchaikovsky, 1876",
+    "key": {
+      "root": "A",
+      "mode": "minor"
+    },
+    "publicDomain": true,
+    "source": "Pyotr Ilyich Tchaikovsky (died 1893); long in the public domain."
+  },
+  {
+    "id": "down-valley",
+    "title": "Down in the Valley",
+    "origin": "American folk song, early 1900s",
+    "key": {
+      "root": "D",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional American folk song, collected in the early 1900s."
+  },
+  {
+    "id": "coming-round",
+    "title": "She'll Be Comin' 'Round the Mountain",
+    "origin": "American spiritual, 1890s",
+    "key": {
+      "root": "C",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional American folk song derived from a 19th century spiritual."
+  },
+  {
+    "id": "michael-row",
+    "title": "Michael, Row the Boat Ashore",
+    "origin": "African American spiritual, 1860s",
+    "key": {
+      "root": "G",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Traditional spiritual first documented in the 1860s."
+  },
+  {
+    "id": "joy-world",
+    "title": "Joy to the World",
+    "origin": "Lowell Mason, 1839",
+    "key": {
+      "root": "D",
+      "mode": "major"
+    },
+    "publicDomain": true,
+    "source": "Lowell Mason (died 1872); the tune dates from 1839."
+  }
+]
