@@ -486,7 +486,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Accessibility pass (axe checks, keyboard-only run-through, live regions)
 - [x] Service worker for offline use, web app manifest, icons
 - [x] Playwright smoke tests
-- [ ] GitHub Actions CI + Pages deploy
+- [x] GitHub Actions CI + Pages deploy
 - [x] About page with "How to get the most out of solo jamming" guide
 - [ ] README with setup, scripts, and audio QA checklist
 
