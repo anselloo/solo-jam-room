@@ -474,7 +474,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Data-file schema validation test
 
 ### Milestone 4 — More games and progress
-- [ ] Missing Member
+- [x] Missing Member
 - [ ] Hold the Pulse
 - [ ] Genre Flip (public-domain tune list with validation)
 - [ ] Song Sprint with saved notes
