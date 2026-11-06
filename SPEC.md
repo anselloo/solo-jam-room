@@ -488,7 +488,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Playwright smoke tests
 - [x] GitHub Actions CI + Pages deploy
 - [x] About page with "How to get the most out of solo jamming" guide
-- [ ] README with setup, scripts, and audio QA checklist
+- [x] README with setup, scripts, and audio QA checklist
 
 ---
 
