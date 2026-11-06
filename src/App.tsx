@@ -6,6 +6,7 @@ import { SessionTracker } from './components/SessionTracker';
 import { ShortcutHelp } from './components/ShortcutHelp';
 import { TransportDock } from './components/TransportDock';
 import { GamePage } from './pages/GamePage';
+import { About } from './pages/About';
 import { Home } from './pages/Home';
 import { Onboarding } from './pages/Onboarding';
 import { Placeholder } from './pages/Placeholder';
@@ -27,7 +28,7 @@ function Page({ path }: { path: string }) {
     case 'settings':
       return <Settings />;
     case 'about':
-      return <Placeholder title="About" />;
+      return <About />;
     default:
       return (
         <Placeholder title="Nothing here">

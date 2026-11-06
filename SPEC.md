@@ -487,7 +487,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Service worker for offline use, web app manifest, icons
 - [x] Playwright smoke tests
 - [ ] GitHub Actions CI + Pages deploy
-- [ ] About page with "How to get the most out of solo jamming" guide
+- [x] About page with "How to get the most out of solo jamming" guide
 - [ ] README with setup, scripts, and audio QA checklist
 
 ---
