@@ -20,7 +20,8 @@ export default defineConfig({
   webServer: {
     command: `npm run build && npm run preview -- --port ${PORT} --strictPort`,
     url: `http://localhost:${PORT}/solo-jam-room/`,
-    reuseExistingServer: !process.env.CI,
+    // Always build and serve fresh: a stale server would test an old build.
+    reuseExistingServer: false,
     timeout: 180_000,
   },
 });

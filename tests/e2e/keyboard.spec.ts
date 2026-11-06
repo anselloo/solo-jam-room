@@ -84,19 +84,25 @@ test('shortcuts: ? opens help, Escape closes it, F toggles Focus Mode', async ({
   await expect(page.locator('.app')).toHaveAttribute('data-focus', 'false');
 });
 
-test('P starts and stops the band and T taps a tempo', async ({ page }) => {
+test('P starts and stops the band', async ({ page }) => {
   await ready(page);
   await page.keyboard.press('p');
   await expect(page.getByRole('button', { name: /■ stop/i })).toBeVisible();
   await page.keyboard.press('p');
   await expect(page.getByRole('button', { name: /▶ play/i })).toBeVisible();
+});
+
+test('T taps a tempo (with a controlled clock, so the result is exact)', async ({ page }) => {
+  await page.clock.install({ time: 0 });
+  await ready(page);
+  // Freeze time: from here it only moves when the test says so.
+  await page.clock.pauseAt(60_000);
+  // Five taps, 500 ms apart: 120 BPM.
   for (let i = 0; i < 5; i++) {
     await page.keyboard.press('t');
-    await page.waitForTimeout(500);
+    await page.clock.runFor(500);
   }
-  const bpm = Number(await page.getByLabel('Beats per minute').inputValue());
-  expect(bpm).toBeGreaterThan(105);
-  expect(bpm).toBeLessThan(135);
+  await expect(page.getByLabel('Beats per minute')).toHaveValue('120');
 });
 
 test('a remapped key works, so a foot pedal can drive the app', async ({ page }) => {

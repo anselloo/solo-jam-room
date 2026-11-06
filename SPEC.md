@@ -484,7 +484,7 @@ ci: deploy to GitHub Pages on push to main
 ### Milestone 5 — Polish and ship
 - [ ] Animations and reduced-motion fallbacks across all games
 - [x] Accessibility pass (axe checks, keyboard-only run-through, live regions)
-- [ ] Service worker for offline use, web app manifest, icons
+- [x] Service worker for offline use, web app manifest, icons
 - [x] Playwright smoke tests
 - [ ] GitHub Actions CI + Pages deploy
 - [ ] About page with "How to get the most out of solo jamming" guide
