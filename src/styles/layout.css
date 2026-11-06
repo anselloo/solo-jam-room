@@ -1,0 +1,336 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-3);
+  top: -100px;
+  z-index: 100;
+  padding: var(--space-3) var(--space-4);
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: var(--radius-sm);
+}
+
+.skip-link:focus {
+  top: var(--space-3);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__brand {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.header__nav {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4) calc(var(--dock-height) + var(--space-7));
+}
+
+/* Focus Mode: chrome disappears, the prompt gets big. */
+[data-focus='true'] .header,
+[data-focus='true'] .dock,
+[data-focus='true'] .footer-note {
+  display: none;
+}
+
+[data-focus='true'] .main {
+  max-width: none;
+  padding-bottom: var(--space-6);
+}
+
+.focus-exit {
+  position: fixed;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 40;
+}
+
+.focus-view {
+  display: grid;
+  gap: var(--space-4);
+}
+
+[data-focus='true'] .focus-view {
+  min-height: 80vh;
+  align-content: center;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+[data-focus='true'] .focus-view h1,
+[data-focus='true'] .focus-view .prompt {
+  font-size: clamp(4rem, 14vw, 11rem);
+}
+
+.prompt {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  color: var(--accent);
+}
+
+/* Home */
+.hero {
+  text-align: center;
+  padding: var(--space-6) 0 var(--space-5);
+}
+
+.hero p {
+  color: var(--text-muted);
+  max-width: 34rem;
+  margin: 0 auto var(--space-5);
+  font-size: 1.15rem;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  padding: 0;
+  margin: var(--space-5) 0 0;
+  list-style: none;
+}
+
+.game-card {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  height: 100%;
+  min-height: 150px;
+  padding: var(--space-4);
+  color: inherit;
+  text-decoration: none;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition:
+    border-color 0.12s,
+    transform 0.12s;
+}
+
+.game-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
+
+.game-card__icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.game-card__title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.game-card__desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.game-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+}
+
+.daily-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border-color: var(--accent);
+}
+
+.daily-card h2 {
+  margin: 0;
+}
+
+.streak {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+/* Transport dock */
+.dock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  background: var(--bg-raised);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -6px 24px rgb(0 0 0 / 30%);
+}
+
+.dock__bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-4);
+  min-height: var(--dock-height);
+}
+
+.dock__bpm {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.dock__bpm input {
+  width: 4.5rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+}
+
+.dock__pulse {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 0 var(--space-2);
+}
+
+.pulse-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.pulse-dot[data-on='true'] {
+  background: var(--teal);
+  box-shadow: 0 0 10px var(--teal);
+}
+
+.pulse-dot[data-on='true'][data-accent='true'] {
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+.dock__spacer {
+  margin-left: auto;
+}
+
+.dock__mixer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-3);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.mixer-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.mixer-row input[type='range'] {
+  flex: 1;
+  min-height: var(--tap);
+  accent-color: var(--accent);
+}
+
+/* Dialogs */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: var(--space-4);
+  background: rgb(0 0 0 / 65%);
+  overflow-y: auto;
+}
+
+.dialog {
+  width: min(600px, 100%);
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.choice-grid {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.choice-grid .btn {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.shortcut-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shortcut-table th,
+.shortcut-table td {
+  padding: var(--space-2) var(--space-2);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.stack > * + * {
+  margin-top: var(--space-4);
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+@media (max-width: 560px) {
+  .header__nav .btn span.label-text {
+    display: none;
+  }
+}
