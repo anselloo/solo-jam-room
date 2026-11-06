@@ -1,3 +1,5 @@
+import { TransportProvider } from './audio/transport';
+import { TransportDock } from './components/TransportDock';
 import { Header } from './components/Header';
 import { Onboarding } from './pages/Onboarding';
 import { Profile } from './pages/Profile';
@@ -44,6 +46,7 @@ function Shell() {
       <main id="main" className="main" tabIndex={-1}>
         <Page path={path} />
       </main>
+      <TransportDock />
       {!profile.onboarded && <Onboarding />}
     </div>
   );
@@ -52,7 +55,9 @@ function Shell() {
 export function App() {
   return (
     <AppStateProvider>
-      <Shell />
+      <TransportProvider>
+        <Shell />
+      </TransportProvider>
     </AppStateProvider>
   );
 }

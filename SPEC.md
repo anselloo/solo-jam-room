@@ -457,7 +457,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Seedable RNG and deck utilities with tests
 - [x] Music theory module (notes, scales, chords, transposition) with tests
 - [x] Audio engine, lookahead scheduler, synthesized click
-- [ ] Transport dock with tap tempo
+- [x] Transport dock with tap tempo
 - [ ] Focus Mode wrapper and remappable keyboard shortcuts
 
 ### Milestone 2 — Backing band
