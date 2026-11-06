@@ -1,5 +1,7 @@
 /** Single shared AudioContext, unlocked on first user gesture, with master gain and mute. */
 
+import { limiterCurve } from './limiter';
+
 type Ctor = typeof AudioContext;
 
 let ctx: AudioContext | null = null;
@@ -14,7 +16,19 @@ function create(): AudioContext {
   const c = new Ctx({ latencyHint: 'interactive' });
   master = c.createGain();
   master.gain.value = muted ? 0 : volume;
-  master.connect(c.destination);
+  // Master chain: gain -> compressor (glues the band together) -> soft limiter (never clips).
+  const comp = c.createDynamicsCompressor();
+  comp.threshold.value = -14;
+  comp.knee.value = 12;
+  comp.ratio.value = 6;
+  comp.attack.value = 0.003;
+  comp.release.value = 0.18;
+  const limiter = c.createWaveShaper();
+  limiter.curve = limiterCurve();
+  limiter.oversample = '2x';
+  master.connect(comp);
+  comp.connect(limiter);
+  limiter.connect(c.destination);
   return c;
 }
 

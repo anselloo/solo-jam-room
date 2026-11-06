@@ -19,6 +19,9 @@ export interface Voices {
 
 const RAMP = 0.012;
 
+/** Headroom for the summed drums, bass and chords before the master chain. */
+const BACKING_LEVEL = 0.7;
+
 /** Synthesized drum kit, bass, chord pad and lead built on the Web Audio API. */
 export class WebAudioVoices implements Voices {
   private readonly ctx = getContext();
@@ -30,6 +33,7 @@ export class WebAudioVoices implements Voices {
   constructor() {
     const ctx = this.ctx;
     this.backing = ctx.createGain();
+    this.backing.gain.value = BACKING_LEVEL;
     this.backing.connect(getMaster());
     const mk = (dest: AudioNode) => {
       const g = ctx.createGain();
@@ -200,7 +204,7 @@ export class WebAudioVoices implements Voices {
 
   duck(from: number, to: number, level: number): void {
     const g = this.backing.gain;
-    g.setTargetAtTime(level, from, 0.03);
-    g.setTargetAtTime(1, to, 0.08);
+    g.setTargetAtTime(BACKING_LEVEL * level, from, 0.03);
+    g.setTargetAtTime(BACKING_LEVEL, to, 0.08);
   }
 }
