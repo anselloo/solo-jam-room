@@ -211,3 +211,22 @@ kbd {
     scroll-behavior: auto !important;
   }
 }
+
+/* Checkboxes and radios: large enough to hit (WCAG 2.2 target size), with a roomy label row. */
+input[type='checkbox'],
+input[type='radio'] {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  flex: none;
+  accent-color: var(--accent);
+}
+
+label:has(> input[type='checkbox']),
+label:has(> input[type='radio']) {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  cursor: pointer;
+}
