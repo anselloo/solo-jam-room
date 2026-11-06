@@ -1,0 +1,548 @@
+[
+  {
+    "id": "rock",
+    "name": "Rock",
+    "swing": 0,
+    "patterns": {
+      "4/4": {
+        "kick": "x.......x.x.....",
+        "snare": "....x.......x...",
+        "hat": "x.x.x.x.x.x.x.x.",
+        "bass": "r.r.r...r.f.r...",
+        "comp": "x...x...x...x..."
+      },
+      "3/4": {
+        "kick": "x...........",
+        "snare": "....x...x...",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "r.r.r...r...",
+        "comp": "x...x...x..."
+      },
+      "6/8": {
+        "kick": "x.xxxx..xxxx",
+        "snare": "......x.....",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "rrrfrfr.rfrf",
+        "comp": "x.x.x.x.x.x."
+      },
+      "5/4": {
+        "kick": "x.......x.x.....x.x.",
+        "snare": "....x.......x.......",
+        "hat": "x.x.x.x.x.x.x.x.x.x.",
+        "bass": "r.r.r...r.f.r...r.f.",
+        "comp": "x...x...x...x...x..."
+      },
+      "7/8": {
+        "kick": "x.xx..xx..xxxx",
+        "snare": "....x...x.....",
+        "hat": "xxxxxxxxxxxxxx",
+        "bass": "rrrfr.rfr.rfrf",
+        "comp": "x.x.x.x.x.x.x."
+      }
+    }
+  },
+  {
+    "id": "shuffle",
+    "name": "Shuffle",
+    "swing": 1,
+    "patterns": {
+      "4/4": {
+        "kick": "x.......x.......",
+        "snare": "....x.......x...",
+        "hat": "x.x.x.x.x.x.x.x.",
+        "bass": "r...f...t...f...",
+        "comp": "....x.....x.x..."
+      },
+      "3/4": {
+        "kick": "x...........",
+        "snare": "....x...x...",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "r...f...f...",
+        "comp": "....x...x..."
+      },
+      "6/8": {
+        "kick": "x.x.x...x.x.",
+        "snare": "......x.....",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "r.t.t.f.t.t.",
+        "comp": "...x.xx..x.x"
+      },
+      "5/4": {
+        "kick": "x.......x.......x...",
+        "snare": "....x.......x.......",
+        "hat": "x.x.x.x.x.x.x.x.x.x.",
+        "bass": "r...f...t...f...t...",
+        "comp": "....x.....x.x.....x."
+      },
+      "7/8": {
+        "kick": "x.x...x...x.x.",
+        "snare": "....x...x.....",
+        "hat": "xxxxxxxxxxxxxx",
+        "bass": "r.t.f.t.f.t.t.",
+        "comp": "...xx..xx..x.x"
+      }
+    }
+  },
+  {
+    "id": "funk",
+    "name": "Funk",
+    "swing": 0,
+    "patterns": {
+      "4/4": {
+        "kick": "x..x......x.....",
+        "snare": "....x..x....x..x",
+        "hat": "xxxxxxxxxxxxxxxx",
+        "bass": "r.or..f.r.o...f.",
+        "comp": "x..x..x.x.....x."
+      },
+      "3/4": {
+        "kick": "x..x........",
+        "snare": "....x..xx..x",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "r.or..f...f.",
+        "comp": "x..x..x...x."
+      },
+      "6/8": {
+        "kick": "x..x.x...x.x",
+        "snare": "......x.....",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "rororo.froro",
+        "comp": "x.x.x..xx.x."
+      },
+      "5/4": {
+        "kick": "x..x......x.......x.",
+        "snare": "....x..x....x..x....",
+        "hat": "xxxxxxxxxxxxxxxxxxxx",
+        "bass": "r.or..f.r.o...f.r.o.",
+        "comp": "x..x..x.x.....x.x..."
+      },
+      "7/8": {
+        "kick": "x..x...x...x.x",
+        "snare": "....x...x.....",
+        "hat": "xxxxxxxxxxxxxx",
+        "bass": "roro.fro.froro",
+        "comp": "x.x..xx..xx.x."
+      }
+    }
+  },
+  {
+    "id": "reggae",
+    "name": "Reggae",
+    "swing": 0.2,
+    "patterns": {
+      "4/4": {
+        "kick": "........x.......",
+        "snare": "........x.......",
+        "hat": "x.x.x.x.x.x.x.x.",
+        "bass": "r.r...f.r.....f.",
+        "comp": "..x...x...x...x."
+      },
+      "3/4": {
+        "kick": "............",
+        "snare": "............",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "r.r...f...f.",
+        "comp": "..x...x...x."
+      },
+      "6/8": {
+        "kick": "..x.x...x.x.",
+        "snare": "..x.x...x.x.",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "rrr.r..fr.r.",
+        "comp": ".x.x.x.x.x.x"
+      },
+      "5/4": {
+        "kick": "........x.......x...",
+        "snare": "........x.......x...",
+        "hat": "x.x.x.x.x.x.x.x.x.x.",
+        "bass": "r.r...f.r.....f.r...",
+        "comp": "..x...x...x...x...x."
+      },
+      "7/8": {
+        "kick": "..x...x...x.x.",
+        "snare": "..x...x...x.x.",
+        "hat": "xxxxxxxxxxxxxx",
+        "bass": "rrr..fr..fr.r.",
+        "comp": ".x.x.x.x.x.x.x"
+      }
+    }
+  },
+  {
+    "id": "bossa",
+    "name": "Bossa nova",
+    "swing": 0,
+    "patterns": {
+      "4/4": {
+        "kick": "x..x..x.x.....x.",
+        "snare": "x..x..x.x.....x.",
+        "hat": "x.x.x.x.x.x.x.x.",
+        "bass": "r..f..r.r.....r.",
+        "comp": "x..x..x.x.....x."
+      },
+      "3/4": {
+        "kick": "x..x..x...x.",
+        "snare": "x..x..x...x.",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "r..f..r...r.",
+        "comp": "x..x..x...x."
+      },
+      "6/8": {
+        "kick": "x.x.x..xx.x.",
+        "snare": "x.x.x..xx.x.",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "r.r.r..rr.r.",
+        "comp": "x.x.x..xx.x."
+      },
+      "5/4": {
+        "kick": "x..x..x.x.....x.x...",
+        "snare": "x..x..x.x.....x.x...",
+        "hat": "x.x.x.x.x.x.x.x.x.x.",
+        "bass": "r..f..r.r.....r.r...",
+        "comp": "x..x..x.x.....x.x..."
+      },
+      "7/8": {
+        "kick": "x.x..xx..xx.x.",
+        "snare": "x.x..xx..xx.x.",
+        "hat": "xxxxxxxxxxxxxx",
+        "bass": "r.r..rr..rr.r.",
+        "comp": "x.x..xx..xx.x."
+      }
+    }
+  },
+  {
+    "id": "punk",
+    "name": "Punk",
+    "swing": 0,
+    "patterns": {
+      "4/4": {
+        "kick": "x.......x.x.....",
+        "snare": "....x.......x...",
+        "hat": "x.x.x.x.x.x.x.x.",
+        "bass": "r.r.r.r.r.r.r.r.",
+        "comp": "x.x.x.x.x.x.x.x."
+      },
+      "3/4": {
+        "kick": "x...........",
+        "snare": "....x...x...",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "r.r.r.r.r.r.",
+        "comp": "x.x.x.x.x.x."
+      },
+      "6/8": {
+        "kick": "x.xxxx..xxxx",
+        "snare": "......x.....",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "rrrrrrrrrrrr",
+        "comp": "xxxxxxxxxxxx"
+      },
+      "5/4": {
+        "kick": "x.......x.x.....x.x.",
+        "snare": "....x.......x.......",
+        "hat": "x.x.x.x.x.x.x.x.x.x.",
+        "bass": "r.r.r.r.r.r.r.r.r.r.",
+        "comp": "x.x.x.x.x.x.x.x.x.x."
+      },
+      "7/8": {
+        "kick": "x.xx..xx..xxxx",
+        "snare": "....x...x.....",
+        "hat": "xxxxxxxxxxxxxx",
+        "bass": "rrrrrrrrrrrrrr",
+        "comp": "xxxxxxxxxxxxxx"
+      }
+    }
+  },
+  {
+    "id": "metal",
+    "name": "Metal",
+    "swing": 0,
+    "patterns": {
+      "4/4": {
+        "kick": "x.xxx.x.x.xxx.x.",
+        "snare": "....x.......x...",
+        "hat": "x...x...x...x...",
+        "bass": "r.rrr.r.r.rrr.r.",
+        "comp": "x.xxx.x.x.xxx.x."
+      },
+      "3/4": {
+        "kick": "x.xxx.x.x.x.",
+        "snare": "....x...x...",
+        "hat": "x...x...x...",
+        "bass": "r.rrr.r.r.r.",
+        "comp": "x.xxx.x.x.x."
+      },
+      "6/8": {
+        "kick": "xxxxxxxxxxxx",
+        "snare": "......x.....",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "rrrrrrrrrrrr",
+        "comp": "xxxxxxxxxxxx"
+      },
+      "5/4": {
+        "kick": "x.xxx.x.x.xxx.x.x.xx",
+        "snare": "....x.......x.......",
+        "hat": "x...x...x...x...x...",
+        "bass": "r.rrr.r.r.rrr.r.r.rr",
+        "comp": "x.xxx.x.x.xxx.x.x.xx"
+      },
+      "7/8": {
+        "kick": "xxxxxxxxxxxxxx",
+        "snare": "....x...x.....",
+        "hat": "x.x.x.x.x.x.x.",
+        "bass": "rrrrrrrrrrrrrr",
+        "comp": "xxxxxxxxxxxxxx"
+      }
+    }
+  },
+  {
+    "id": "lofi",
+    "name": "Lo-fi",
+    "swing": 0.5,
+    "patterns": {
+      "4/4": {
+        "kick": "x.....x....x..x.",
+        "snare": "....x.......x...",
+        "hat": "x.x.x.x.x.x.x.x.",
+        "bass": "r.....f.r.....f.",
+        "comp": "l.......x......."
+      },
+      "3/4": {
+        "kick": "x.....x...x.",
+        "snare": "....x...x...",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "r.....f...f.",
+        "comp": "l..........."
+      },
+      "6/8": {
+        "kick": "x......x....",
+        "snare": "......x.....",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "r.r.r..fr.r.",
+        "comp": "l.x.x...x.x."
+      },
+      "5/4": {
+        "kick": "x.....x....x..x....x",
+        "snare": "....x.......x.......",
+        "hat": "x.x.x.x.x.x.x.x.x.x.",
+        "bass": "r.....f.r.....f.r...",
+        "comp": "l.......x.......x..."
+      },
+      "7/8": {
+        "kick": "x....x...x....",
+        "snare": "....x...x.....",
+        "hat": "xxxxxxxxxxxxxx",
+        "bass": "r.r..fr..fr.r.",
+        "comp": "l.x...x...x.x."
+      }
+    }
+  },
+  {
+    "id": "swing",
+    "name": "Jazz swing",
+    "swing": 1,
+    "patterns": {
+      "4/4": {
+        "kick": "x...............",
+        "snare": "......x.......x.",
+        "hat": "x...x..xx...x..x",
+        "bass": "r...t...f...t...",
+        "comp": "x.........x....."
+      },
+      "3/4": {
+        "kick": "x...........",
+        "snare": "......x...x.",
+        "hat": "x...x..xx..x",
+        "bass": "r...t...t...",
+        "comp": "x..........."
+      },
+      "6/8": {
+        "kick": "x...........",
+        "snare": ".......x....",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "r.f.f.t.f.f.",
+        "comp": "x..x.x...x.x"
+      },
+      "5/4": {
+        "kick": "x...................",
+        "snare": "......x.......x.....",
+        "hat": "x...x..xx...x..xx...",
+        "bass": "r...t...f...t...f...",
+        "comp": "x.........x.......x."
+      },
+      "7/8": {
+        "kick": "x.............",
+        "snare": ".....x...x....",
+        "hat": "x.x.x.x.x.x.x.",
+        "bass": "r.f.t.f.t.f.f.",
+        "comp": "x..x...x...x.x"
+      }
+    }
+  },
+  {
+    "id": "ballad",
+    "name": "Ballad",
+    "swing": 0,
+    "patterns": {
+      "4/4": {
+        "kick": "x.........x.....",
+        "snare": "....x.......x...",
+        "hat": "x.x.x.x.x.x.x.x.",
+        "bass": "r.......f.......",
+        "comp": "l..............."
+      },
+      "3/4": {
+        "kick": "x...........",
+        "snare": "....x...x...",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "r...........",
+        "comp": "l..........."
+      },
+      "6/8": {
+        "kick": "x..x.x...x.x",
+        "snare": "......x.....",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "r.f.f...f.f.",
+        "comp": "l..........."
+      },
+      "5/4": {
+        "kick": "x.........x.......x.",
+        "snare": "....x.......x.......",
+        "hat": "x.x.x.x.x.x.x.x.x.x.",
+        "bass": "r.......f.......f...",
+        "comp": "l..................."
+      },
+      "7/8": {
+        "kick": "x..x...x...x.x",
+        "snare": "....x...x.....",
+        "hat": "xxxxxxxxxxxxxx",
+        "bass": "r.f...f...f.f.",
+        "comp": "l............."
+      }
+    }
+  },
+  {
+    "id": "country",
+    "name": "Country",
+    "swing": 0,
+    "patterns": {
+      "4/4": {
+        "kick": "x.......x.......",
+        "snare": "....x.......x...",
+        "hat": "x.x.x.x.x.x.x.x.",
+        "bass": "r...f...r...f...",
+        "comp": "x...x...x...x..."
+      },
+      "3/4": {
+        "kick": "x...........",
+        "snare": "....x...x...",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "r...f...f...",
+        "comp": "x...x...x..."
+      },
+      "6/8": {
+        "kick": "x.x.x...x.x.",
+        "snare": "......x.....",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "r.r.r.f.r.r.",
+        "comp": "x.x.x.x.x.x."
+      },
+      "5/4": {
+        "kick": "x.......x.......x...",
+        "snare": "....x.......x.......",
+        "hat": "x.x.x.x.x.x.x.x.x.x.",
+        "bass": "r...f...r...f...r...",
+        "comp": "x...x...x...x...x..."
+      },
+      "7/8": {
+        "kick": "x.x...x...x.x.",
+        "snare": "....x...x.....",
+        "hat": "xxxxxxxxxxxxxx",
+        "bass": "r.r.f.r.f.r.r.",
+        "comp": "x.x.x.x.x.x.x."
+      }
+    }
+  },
+  {
+    "id": "waltz",
+    "name": "Waltz",
+    "swing": 0,
+    "patterns": {
+      "4/4": {
+        "kick": "x...............",
+        "snare": "....x...x...x...",
+        "hat": "x.x.x.x.x.x.x.x.",
+        "bass": "r...............",
+        "comp": "....x...x...x..."
+      },
+      "3/4": {
+        "kick": "x...........",
+        "snare": "....x...x...",
+        "hat": "x.x.x.x.x.x.",
+        "bass": "r...........",
+        "comp": "....x...x..."
+      },
+      "6/8": {
+        "kick": "x...........",
+        "snare": "..x.x.x.x.x.",
+        "hat": "xxxxxxxxxxxx",
+        "bass": "r...........",
+        "comp": "..x.x.x.x.x."
+      },
+      "5/4": {
+        "kick": "x...................",
+        "snare": "....x...x...x...x...",
+        "hat": "x.x.x.x.x.x.x.x.x.x.",
+        "bass": "r...................",
+        "comp": "....x...x...x...x..."
+      },
+      "7/8": {
+        "kick": "x.............",
+        "snare": "..x.x.x.x.x.x.",
+        "hat": "xxxxxxxxxxxxxx",
+        "bass": "r.............",
+        "comp": "..x.x.x.x.x.x."
+      }
+    }
+  },
+  {
+    "id": "shanty",
+    "name": "Sea shanty",
+    "swing": 0,
+    "patterns": {
+      "4/4": {
+        "kick": "x...............",
+        "snare": "....x.......x...",
+        "hat": "........x.......",
+        "bass": "r...f.......f...",
+        "comp": "x...x...x...x..."
+      },
+      "3/4": {
+        "kick": "x...........",
+        "snare": "....x...x...",
+        "hat": "............",
+        "bass": "r...f...f...",
+        "comp": "x...x...x..."
+      },
+      "6/8": {
+        "kick": "x...........",
+        "snare": "......x.....",
+        "hat": "..x.x...x.x.",
+        "bass": "r.....f.....",
+        "comp": "x.x.x.x.x.x."
+      },
+      "5/4": {
+        "kick": "x...................",
+        "snare": "....x.......x.......",
+        "hat": "........x.......x...",
+        "bass": "r...f.......f.......",
+        "comp": "x...x...x...x...x..."
+      },
+      "7/8": {
+        "kick": "x.............",
+        "snare": "....x...x.....",
+        "hat": "..x...x...x.x.",
+        "bass": "r...f...f.....",
+        "comp": "x.x.x.x.x.x.x."
+      }
+    }
+  }
+]

@@ -461,8 +461,8 @@ ci: deploy to GitHub Pages on push to main
 - [x] Focus Mode wrapper and remappable keyboard shortcuts
 
 ### Milestone 2 — Backing band
-- [ ] Synthesized drum kit, bass voice, chord pad, lead voice
-- [ ] Groove patterns for each genre and time signature, with validity tests
+- [x] Synthesized drum kit, bass voice, chord pad, lead voice
+- [x] Groove patterns for each genre and time signature, with validity tests
 - [ ] Progression playback with per-part mixer and mute
 - [ ] Glitch-free looping and tempo changes
 

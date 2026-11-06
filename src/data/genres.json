@@ -1,0 +1,106 @@
+[
+  {
+    "id": "rock",
+    "name": "Rock",
+    "groove": "rock",
+    "tempo": [90, 140],
+    "feel": "Straight eighths, snare on 2 and 4.",
+    "meters": ["4/4"]
+  },
+  {
+    "id": "blues",
+    "name": "Blues shuffle",
+    "groove": "shuffle",
+    "tempo": [70, 130],
+    "feel": "Rolling triplet shuffle.",
+    "meters": ["4/4", "6/8"]
+  },
+  {
+    "id": "funk",
+    "name": "Funk",
+    "groove": "funk",
+    "tempo": [90, 115],
+    "feel": "Tight sixteenth-note pocket.",
+    "meters": ["4/4"]
+  },
+  {
+    "id": "reggae",
+    "name": "Reggae",
+    "groove": "reggae",
+    "tempo": [65, 90],
+    "feel": "One-drop with offbeat skank.",
+    "meters": ["4/4"]
+  },
+  {
+    "id": "bossa",
+    "name": "Bossa nova",
+    "groove": "bossa",
+    "tempo": [110, 150],
+    "feel": "Gentle syncopated Brazilian groove.",
+    "meters": ["4/4"]
+  },
+  {
+    "id": "punk",
+    "name": "Punk",
+    "groove": "punk",
+    "tempo": [150, 190],
+    "feel": "Fast, loud, all downstrokes.",
+    "meters": ["4/4"]
+  },
+  {
+    "id": "metal",
+    "name": "Metal",
+    "groove": "metal",
+    "tempo": [120, 180],
+    "feel": "Heavy galloping kick and chugging bass.",
+    "meters": ["4/4"]
+  },
+  {
+    "id": "lofi",
+    "name": "Lo-fi",
+    "groove": "lofi",
+    "tempo": [60, 85],
+    "feel": "Dusty, lazy and laid back.",
+    "meters": ["4/4"]
+  },
+  {
+    "id": "jazz",
+    "name": "Jazz swing",
+    "groove": "swing",
+    "tempo": [110, 200],
+    "feel": "Ride cymbal swing and walking bass.",
+    "meters": ["4/4"]
+  },
+  {
+    "id": "ballad",
+    "name": "Ballad",
+    "groove": "ballad",
+    "tempo": [55, 80],
+    "feel": "Slow and spacious with a held pad.",
+    "meters": ["4/4", "6/8"]
+  },
+  {
+    "id": "country",
+    "name": "Country",
+    "groove": "country",
+    "tempo": [100, 150],
+    "feel": "Boom-chick, root and fifth.",
+    "meters": ["4/4"]
+  },
+  {
+    "id": "waltz",
+    "name": "Waltz",
+    "groove": "waltz",
+    "tempo": [90, 150],
+    "feel": "Oom-pah-pah in three.",
+    "meters": ["3/4"]
+  },
+  {
+    "id": "shanty",
+    "name": "Sea shanty",
+    "groove": "shanty",
+    "tempo": [80, 120],
+    "feel": "Stomping, swaying six-eight.",
+    "meters": ["6/8"]
+  }
+]
