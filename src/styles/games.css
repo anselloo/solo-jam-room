@@ -246,3 +246,24 @@
 .bar-counter__beat[data-on='true'] {
   background: var(--teal);
 }
+
+/* Timer */
+.timer {
+  text-align: center;
+}
+
+.timer__digits {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 12vw, 8rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.timer[data-warn='true'] .timer__digits {
+  color: var(--danger);
+}
+
+[data-focus='true'] .timer__digits {
+  font-size: clamp(6rem, 24vw, 18rem);
+}
