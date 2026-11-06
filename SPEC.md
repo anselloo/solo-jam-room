@@ -469,7 +469,7 @@ ci: deploy to GitHub Pages on push to main
 ### Milestone 3 — Core games (MVP)
 - [x] Jam Roulette (with backing)
 - [ ] Trade Fours (incl. echo variant)
-- [ ] Chord Progression Dealer (incl. Changes Challenge, capo and transposition)
+- [x] Chord Progression Dealer (incl. Changes Challenge, capo and transposition)
 - [x] Constraint Cards with ≥ 60 cards and overlay mode
 - [ ] Data-file schema validation test
 
