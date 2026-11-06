@@ -450,8 +450,8 @@ ci: deploy to GitHub Pages on push to main
 
 ### Milestone 1 — Foundation
 - [x] Scaffold Vite + React + TS, ESLint, Prettier, Vitest, `.gitignore`
-- [ ] Design tokens, light/dark themes, global layout, header
-- [ ] Hash router with placeholder pages for every route
+- [x] Design tokens, light/dark themes, global layout, header
+- [x] Hash router with placeholder pages for every route
 - [ ] Home page game grid
 - [ ] Onboarding flow and Profile page with persistence
 - [x] Seedable RNG and deck utilities with tests
