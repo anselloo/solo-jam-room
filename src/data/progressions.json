@@ -1,0 +1,210 @@
+{
+  "templates": {
+    "major": {
+      "beginner": {
+        "4": [
+          ["I", "vi", "IV", "V"],
+          ["I", "IV", "V", "IV"],
+          ["I", "V", "vi", "IV"],
+          ["vi", "IV", "I", "V"],
+          ["I", "IV", "vi", "V"],
+          ["I", "iii", "IV", "V"]
+        ],
+        "8": [
+          ["I", "IV", "I", "V", "I", "IV", "V", "I"],
+          ["I", "V", "vi", "iii", "IV", "I", "IV", "V"],
+          ["I", "vi", "IV", "V", "I", "vi", "IV", "V"],
+          ["I", "iii", "vi", "IV", "I", "V", "IV", "V"]
+        ]
+      },
+      "intermediate": {
+        "4": [
+          ["ii7", "V7", "Imaj7", "Imaj7"],
+          ["Imaj7", "vi7", "ii7", "V7"],
+          ["iii7", "vi7", "ii7", "V7"],
+          ["I", "bVII", "IV", "I"],
+          ["I", "iv", "I", "V7"],
+          ["Imaj7", "IVmaj7", "iii7", "vi7"]
+        ],
+        "8": [
+          ["Imaj7", "vi7", "ii7", "V7", "iii7", "vi7", "ii7", "V7"],
+          ["ii7", "V7", "Imaj7", "vi7", "ii7", "V7", "Imaj7", "Imaj7"],
+          ["I", "bVII", "IV", "I", "vi", "bVI", "bVII", "V7"],
+          ["Imaj7", "IVmaj7", "iv", "I", "ii7", "V7", "Imaj7", "V7"]
+        ]
+      },
+      "advanced": {
+        "4": [
+          ["Imaj7", "V7/ii", "ii7", "V7"],
+          ["ii7", "bII7", "Imaj7", "Imaj7"],
+          ["Imaj9", "vi9", "ii9", "V9"],
+          ["Imaj7", "V7/IV", "IVmaj7", "iv7"],
+          ["iii7", "V7/ii", "ii7", "V7/V"],
+          ["Imaj7", "#iv°7", "V7/V", "V7"]
+        ],
+        "8": [
+          ["Imaj7", "V7/ii", "ii7", "V7/V", "iii7", "V7/ii", "ii7", "V7"],
+          ["ii7", "bII7", "Imaj7", "vi7", "ii7", "bII7", "Imaj7", "Imaj7"],
+          ["Imaj7", "V7/IV", "IVmaj7", "iv7", "iii7", "bIIImaj7", "ii7", "V7"],
+          ["Imaj9", "vi9", "ii9", "V9", "iii7", "V7/ii", "ii9", "V9"]
+        ]
+      }
+    },
+    "minor": {
+      "beginner": {
+        "4": [
+          ["i", "VI", "III", "VII"],
+          ["i", "iv", "v", "i"],
+          ["i", "iv", "VII", "III"],
+          ["i", "VII", "VI", "VII"],
+          ["i", "iv", "i", "v"],
+          ["i", "III", "VII", "iv"]
+        ],
+        "8": [
+          ["i", "iv", "i", "v", "i", "VI", "VII", "i"],
+          ["i", "VI", "III", "VII", "i", "VI", "VII", "VII"],
+          ["i", "VII", "VI", "VII", "i", "iv", "v", "i"],
+          ["i", "III", "VII", "iv", "i", "VI", "iv", "v"]
+        ]
+      },
+      "intermediate": {
+        "4": [
+          ["iiø7", "V7", "i7", "i7"],
+          ["i7", "iv7", "VII7", "IIImaj7"],
+          ["i7", "VImaj7", "iiø7", "V7"],
+          ["i", "VI", "iv", "V7"],
+          ["i7", "iv7", "i7", "V7"],
+          ["i", "VII", "VI", "V7"]
+        ],
+        "8": [
+          ["i7", "iv7", "VII7", "IIImaj7", "VImaj7", "iiø7", "V7", "i7"],
+          ["iiø7", "V7", "i7", "i7", "iv7", "VII7", "IIImaj7", "V7"],
+          ["i", "VI", "III", "VII", "i", "iv", "V7", "i"],
+          ["i7", "VImaj7", "iiø7", "V7", "i7", "iv7", "V7", "i7"]
+        ]
+      },
+      "advanced": {
+        "4": [
+          ["i7", "iv7", "V7", "i7"],
+          ["iiø7", "bII7", "i7", "i7"],
+          ["i9", "VImaj7", "iiø7", "V7"],
+          ["i7", "V7/III", "IIImaj7", "V7/VI"],
+          ["i7", "iv7", "V7/V", "V7"],
+          ["i7", "#iv°7", "V7", "i7"]
+        ],
+        "8": [
+          ["i7", "iv7", "V7/V", "V7", "i7", "VImaj7", "iiø7", "V7"],
+          ["iiø7", "bII7", "i7", "VImaj7", "iiø7", "bII7", "i7", "i7"],
+          ["i9", "iv9", "V7/III", "IIImaj7", "VImaj7", "iiø7", "V7", "i9"],
+          ["i7", "V7/III", "IIImaj7", "V7/VI", "VImaj7", "iiø7", "V7", "i7"]
+        ]
+      }
+    },
+    "modal": {
+      "dorian": {
+        "4": [
+          ["i7", "IV7", "i7", "IV7"],
+          ["i7", "ii7", "IIImaj7", "IV7"],
+          ["i7", "VII", "IV7", "i7"]
+        ],
+        "8": [
+          ["i7", "i7", "IV7", "IV7", "i7", "ii7", "IV7", "i7"],
+          ["i7", "VII", "IV7", "i7", "v7", "IV7", "VII", "i7"]
+        ]
+      },
+      "mixolydian": {
+        "4": [
+          ["I7", "VII", "IV", "I7"],
+          ["I", "VII", "IV", "I"],
+          ["I7", "v7", "IV", "I7"]
+        ],
+        "8": [
+          ["I7", "I7", "IV", "IV", "I7", "VII", "IV", "I7"],
+          ["I", "VII", "IV", "I", "ii7", "v7", "IV", "I"]
+        ]
+      },
+      "lydian": {
+        "4": [
+          ["Imaj7", "II", "Imaj7", "II"],
+          ["Imaj7", "II", "iii7", "II"],
+          ["I", "II", "vi", "II"]
+        ],
+        "8": [
+          ["Imaj7", "II", "Imaj7", "II", "iii7", "vii7", "II", "Imaj7"],
+          ["I", "II", "I", "II", "vi", "II", "iii", "I"]
+        ]
+      },
+      "phrygian": {
+        "4": [
+          ["i", "II", "i", "II"],
+          ["i", "II", "III", "II"],
+          ["i", "II", "vii", "i"]
+        ],
+        "8": [
+          ["i", "II", "i", "II", "iv", "II", "i", "i"],
+          ["i", "II", "III", "II", "i", "vii", "II", "i"]
+        ]
+      },
+      "locrian": {
+        "4": [
+          ["i°", "II", "i°", "II"],
+          ["i°", "II", "iv", "II"],
+          ["i°", "iii", "II", "i°"]
+        ],
+        "8": [
+          ["i°", "II", "i°", "II", "iv", "II", "V", "i°"],
+          ["i°", "iii", "II", "i°", "iv", "II", "VI", "i°"]
+        ]
+      }
+    }
+  },
+  "blues": {
+    "major": {
+      "beginner": [["I", "I", "I", "I", "IV", "IV", "I", "I", "V", "IV", "I", "V"]],
+      "intermediate": [
+        ["I7", "IV7", "I7", "I7", "IV7", "IV7", "I7", "I7", "V7", "IV7", "I7", "V7"]
+      ],
+      "advanced": [
+        ["I7", "IV7", "I7", "v7", "IV7", "#iv°7", "I7", "V7/ii", "ii7", "V7", "I7", "V7"]
+      ]
+    },
+    "minor": {
+      "beginner": [["i", "i", "i", "i", "iv", "iv", "i", "i", "VI", "v", "i", "v"]],
+      "intermediate": [["i7", "i7", "i7", "i7", "iv7", "iv7", "i7", "i7", "VI7", "V7", "i7", "V7"]],
+      "advanced": [
+        ["i7", "iv7", "i7", "V7/iv", "iv7", "#iv°7", "i7", "V7/ii", "iiø7", "V7", "i7", "V7"]
+      ]
+    }
+  },
+  "pools": {
+    "major": {
+      "beginner": ["I", "ii", "iii", "IV", "V", "vi"],
+      "intermediate": ["I", "ii7", "iii7", "IVmaj7", "V7", "vi7", "bVII", "bVI", "iv", "Imaj7"],
+      "advanced": [
+        "Imaj9",
+        "ii9",
+        "V9",
+        "vi9",
+        "V7/ii",
+        "V7/V",
+        "V7/IV",
+        "bII7",
+        "iv7",
+        "bIIImaj7",
+        "#iv°7"
+      ]
+    },
+    "minor": {
+      "beginner": ["i", "III", "iv", "v", "VI", "VII"],
+      "intermediate": ["i7", "iiø7", "IIImaj7", "iv7", "V7", "VImaj7", "VII7"],
+      "advanced": ["i9", "iv9", "V7", "V7/III", "V7/VI", "V7/V", "bII7", "VImaj7", "#iv°7"]
+    },
+    "modal": {
+      "dorian": ["i7", "ii7", "IIImaj7", "IV7", "v7", "VII"],
+      "mixolydian": ["I7", "ii7", "iii°", "IV", "v7", "VII"],
+      "lydian": ["Imaj7", "II", "iii7", "vii7", "vi", "V"],
+      "phrygian": ["i", "II", "III", "iv", "vii", "VI"],
+      "locrian": ["i°", "II", "iii", "iv", "V", "VI"]
+    }
+  }
+}
