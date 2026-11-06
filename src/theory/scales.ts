@@ -93,7 +93,11 @@ const rank = (n: Note): number => {
  * whose scale needs the fewest accidentals and never needs a double accidental.
  * Returns index = pitch class.
  */
+const rootsCache = new Map<ScaleId, Note[]>();
+
 export function keyRootsFor(id: ScaleId): Note[] {
+  const cached = rootsCache.get(id);
+  if (cached) return cached;
   const out: Note[] = [];
   for (let p = 0; p < 12; p++) {
     const candidates = LETTER_OPTIONS.map(parseNote).filter((n) => pc(n) === p);
@@ -111,6 +115,7 @@ export function keyRootsFor(id: ScaleId): Note[] {
     // Candidates always include one without double accidentals for the 7-note scales we ship.
     out.push((scored[0] ?? { n: candidates[0] }).n);
   }
+  rootsCache.set(id, out);
   return out;
 }
 
