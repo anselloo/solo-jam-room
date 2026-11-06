@@ -458,7 +458,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Music theory module (notes, scales, chords, transposition) with tests
 - [x] Audio engine, lookahead scheduler, synthesized click
 - [x] Transport dock with tap tempo
-- [ ] Focus Mode wrapper and remappable keyboard shortcuts
+- [x] Focus Mode wrapper and remappable keyboard shortcuts
 
 ### Milestone 2 — Backing band
 - [ ] Synthesized drum kit, bass voice, chord pad, lead voice

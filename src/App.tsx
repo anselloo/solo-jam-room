@@ -1,11 +1,15 @@
 import { TransportProvider } from './audio/transport';
-import { TransportDock } from './components/TransportDock';
+import { GlobalShortcuts } from './components/GlobalShortcuts';
 import { Header } from './components/Header';
-import { Onboarding } from './pages/Onboarding';
-import { Profile } from './pages/Profile';
-import { Home } from './pages/Home';
+import { LiveRegion } from './components/LiveRegion';
+import { ShortcutHelp } from './components/ShortcutHelp';
+import { TransportDock } from './components/TransportDock';
 import { GamePage } from './pages/GamePage';
+import { Home } from './pages/Home';
+import { Onboarding } from './pages/Onboarding';
 import { Placeholder } from './pages/Placeholder';
+import { Profile } from './pages/Profile';
+import { Settings } from './pages/Settings';
 import { useHashPath } from './router';
 import { resolveRoute } from './routes';
 import { AppStateProvider, useApp } from './state/AppState';
@@ -20,7 +24,7 @@ function Page({ path }: { path: string }) {
     case 'profile':
       return <Profile />;
     case 'settings':
-      return <Placeholder title="Settings" />;
+      return <Settings />;
     case 'about':
       return <Placeholder title="About" />;
     default:
@@ -36,17 +40,25 @@ function Page({ path }: { path: string }) {
 
 function Shell() {
   const path = useHashPath();
-  const { focus, profile } = useApp();
+  const { focus, setFocus, profile } = useApp();
   return (
     <div className="app" data-focus={focus}>
       <a className="skip-link" href="#main">
         Skip to content
       </a>
+      <GlobalShortcuts />
+      <LiveRegion />
+      {focus && (
+        <button type="button" className="btn focus-exit" onClick={() => setFocus(false)}>
+          Exit Focus Mode (Esc)
+        </button>
+      )}
       <Header atHome={path === '/'} />
       <main id="main" className="main" tabIndex={-1}>
         <Page path={path} />
       </main>
       <TransportDock />
+      <ShortcutHelp />
       {!profile.onboarded && <Onboarding />}
     </div>
   );
