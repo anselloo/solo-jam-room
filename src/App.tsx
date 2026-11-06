@@ -1,4 +1,6 @@
 import { Header } from './components/Header';
+import { Onboarding } from './pages/Onboarding';
+import { Profile } from './pages/Profile';
 import { Home } from './pages/Home';
 import { GamePage } from './pages/GamePage';
 import { Placeholder } from './pages/Placeholder';
@@ -14,7 +16,7 @@ function Page({ path }: { path: string }) {
     case 'game':
       return <GamePage game={route.game!} />;
     case 'profile':
-      return <Placeholder title="Profile" />;
+      return <Profile />;
     case 'settings':
       return <Placeholder title="Settings" />;
     case 'about':
@@ -32,7 +34,7 @@ function Page({ path }: { path: string }) {
 
 function Shell() {
   const path = useHashPath();
-  const { focus } = useApp();
+  const { focus, profile } = useApp();
   return (
     <div className="app" data-focus={focus}>
       <a className="skip-link" href="#main">
@@ -42,6 +44,7 @@ function Shell() {
       <main id="main" className="main" tabIndex={-1}>
         <Page path={path} />
       </main>
+      {!profile.onboarded && <Onboarding />}
     </div>
   );
 }

@@ -453,7 +453,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Design tokens, light/dark themes, global layout, header
 - [x] Hash router with placeholder pages for every route
 - [x] Home page game grid
-- [ ] Onboarding flow and Profile page with persistence
+- [x] Onboarding flow and Profile page with persistence
 - [x] Seedable RNG and deck utilities with tests
 - [x] Music theory module (notes, scales, chords, transposition) with tests
 - [x] Audio engine, lookahead scheduler, synthesized click
