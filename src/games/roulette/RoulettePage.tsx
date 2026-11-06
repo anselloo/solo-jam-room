@@ -230,6 +230,24 @@ export function RoulettePage() {
           ))}
         </div>
 
+        <div className="row" style={{ justifyContent: 'center' }}>
+          <button type="button" className="btn btn--primary" onClick={doSpin}>
+            {spinning ? 'Skip' : result ? 'Spin again' : 'Spin'}
+          </button>
+          {result && (
+            <button
+              type="button"
+              className="btn"
+              onClick={() => (transport.running ? transport.stop() : void play())}
+            >
+              {transport.running ? '■ Stop' : '▶ Play'}
+            </button>
+          )}
+          <button type="button" className="btn btn--ghost" onClick={back}>
+            Back
+          </button>
+        </div>
+
         {result && !spinning && (
           <div className="card stack" aria-label="Result">
             <p className="prompt">
@@ -248,24 +266,6 @@ export function RoulettePage() {
             )}
           </div>
         )}
-
-        <div className="row" style={{ justifyContent: 'center' }}>
-          <button type="button" className="btn btn--primary" onClick={doSpin}>
-            {spinning ? 'Skip' : result ? 'Spin again' : 'Spin'}
-          </button>
-          {result && (
-            <button
-              type="button"
-              className="btn"
-              onClick={() => (transport.running ? transport.stop() : void play())}
-            >
-              {transport.running ? '■ Stop' : '▶ Play'}
-            </button>
-          )}
-          <button type="button" className="btn btn--ghost" onClick={back}>
-            Back
-          </button>
-        </div>
       </FocusView>
 
       <div className="card stack">

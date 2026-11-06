@@ -66,7 +66,7 @@ export function DailyPage() {
 
       <div className="card stack" aria-label="Today's challenge">
         <span className="chip">{challenge.title}</span>
-        <p className="prompt" style={{ fontSize: 'clamp(1.6rem, 4.5vw, 2.6rem)' }}>
+        <p className="prompt prompt--prose" style={{ fontSize: 'clamp(1.4rem, 3.6vw, 2.1rem)' }}>
           {challenge.summary}
         </p>
         <ul className="plain-list">

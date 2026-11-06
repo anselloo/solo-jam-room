@@ -78,16 +78,39 @@
   gap: var(--space-4);
 }
 
+/* Focus Mode enlarges what you read from a music stand (the prompt, chords, counters and timer),
+   not the controls. The game title stays for screen readers but is not drawn. */
 [data-focus='true'] .focus-view {
   min-height: 80vh;
-  align-content: center;
+  /* "safe" keeps the top of tall content reachable instead of clipping it. */
+  align-content: safe center;
   text-align: center;
-  font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
-[data-focus='true'] .focus-view h1,
+/* On a music stand only the focus view matters: settings and other panels step aside. */
+[data-focus='true'] .main > section > :not(.focus-view) {
+  display: none;
+}
+
+[data-focus='true'] .focus-view > h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 [data-focus='true'] .focus-view .prompt {
-  font-size: clamp(4rem, 14vw, 11rem);
+  font-size: clamp(3rem, 11vw, 9rem);
+}
+
+[data-focus='true'] .focus-view p {
+  font-size: clamp(1.1rem, 2.6vw, 2rem);
+}
+
+[data-focus='true'] .focus-view .btn {
+  min-height: 56px;
 }
 
 .prompt {
@@ -335,8 +358,10 @@
 }
 
 .dock__chord {
-  font-family: var(--font-display);
-  font-size: 2rem;
+  font-family: var(--font-ui);
+  font-weight: 800;
+  text-transform: none;
+  font-size: 1.7rem;
   line-height: 1;
   color: var(--accent);
   min-width: 3ch;
@@ -397,4 +422,14 @@
 
 .about .card h2 {
   margin-bottom: var(--space-2);
+}
+
+/* A prompt that is a sentence rather than a headline: it can contain case-sensitive music text such
+   as Roman numerals (ii7 – V7 – Imaj7), so it keeps the UI face and its original capitalization. */
+.prompt--prose {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.25;
 }

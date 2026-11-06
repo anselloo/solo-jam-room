@@ -180,8 +180,11 @@
   box-shadow: var(--glow);
 }
 
+/* Chord symbols are case-sensitive (Gm is not GM), so they must not use the all-caps display face. */
 .chord-card__name {
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
+  font-weight: 800;
+  text-transform: none;
   font-size: clamp(2rem, 6vw, 3.4rem);
   line-height: 1;
 }
