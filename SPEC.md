@@ -452,7 +452,7 @@ ci: deploy to GitHub Pages on push to main
 - [x] Scaffold Vite + React + TS, ESLint, Prettier, Vitest, `.gitignore`
 - [x] Design tokens, light/dark themes, global layout, header
 - [x] Hash router with placeholder pages for every route
-- [ ] Home page game grid
+- [x] Home page game grid
 - [ ] Onboarding flow and Profile page with persistence
 - [x] Seedable RNG and deck utilities with tests
 - [x] Music theory module (notes, scales, chords, transposition) with tests

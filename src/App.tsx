@@ -1,4 +1,5 @@
 import { Header } from './components/Header';
+import { Home } from './pages/Home';
 import { GamePage } from './pages/GamePage';
 import { Placeholder } from './pages/Placeholder';
 import { useHashPath } from './router';
@@ -9,7 +10,7 @@ function Page({ path }: { path: string }) {
   const route = resolveRoute(path);
   switch (route.page) {
     case 'home':
-      return <Placeholder title="Solo Jam Room" />;
+      return <Home />;
     case 'game':
       return <GamePage game={route.game!} />;
     case 'profile':
