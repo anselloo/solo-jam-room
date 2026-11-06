@@ -455,7 +455,7 @@ ci: deploy to GitHub Pages on push to main
 - [ ] Home page game grid
 - [ ] Onboarding flow and Profile page with persistence
 - [x] Seedable RNG and deck utilities with tests
-- [ ] Music theory module (notes, scales, chords, transposition) with tests
+- [x] Music theory module (notes, scales, chords, transposition) with tests
 - [ ] Audio engine, lookahead scheduler, synthesized click
 - [ ] Transport dock with tap tempo
 - [ ] Focus Mode wrapper and remappable keyboard shortcuts
