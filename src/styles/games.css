@@ -25,15 +25,13 @@
   place-items: center;
   padding: var(--space-5);
   border-radius: var(--radius);
-  border: 2px solid var(--accent);
+  box-shadow: var(--shadow-lift);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
 .flip__back {
-  background:
-    repeating-linear-gradient(45deg, transparent 0 10px, rgb(255 176 46 / 8%) 10px 20px),
-    var(--bg-raised);
+  background: linear-gradient(145deg, #8b4df5, #5b21b6);
 }
 
 .flip__front {
@@ -43,9 +41,10 @@
 
 .flip__logo {
   font-family: var(--font-display);
-  font-size: 4rem;
-  color: var(--accent);
-  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: var(--yellow);
 }
 
 .constraint {
@@ -57,9 +56,10 @@
 
 .constraint__text {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  letter-spacing: -0.03em;
   line-height: 1.1;
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -75,8 +75,8 @@
   min-height: 1.5em;
   margin: 0;
   text-align: center;
-  color: var(--teal);
-  font-weight: 700;
+  color: var(--accent-text);
+  font-weight: 600;
 }
 
 .pinned {
@@ -93,7 +93,7 @@
   justify-content: space-between;
   gap: var(--space-3);
   padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--accent);
+  background: var(--accent-tint);
   border-radius: var(--radius-sm);
 }
 
@@ -113,21 +113,21 @@
   gap: var(--space-2);
   padding: var(--space-3);
   background: var(--bg-raised);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
   text-align: center;
 }
 
 .reel[data-locked='true'] {
-  border-color: var(--teal);
+  box-shadow:
+    inset 0 0 0 2px var(--accent-text),
+    var(--shadow);
 }
 
 .reel__label {
   color: var(--text-muted);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 .reel__window {
@@ -136,10 +136,11 @@
   min-height: 84px;
   overflow: hidden;
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  line-height: 1;
-  text-transform: uppercase;
-  color: var(--accent);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3.6vw, 2.3rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--accent-text);
 }
 
 .reel__window[data-spinning='true'] {
@@ -166,18 +167,23 @@
   justify-items: center;
   padding: var(--space-4) var(--space-2);
   background: var(--bg-raised);
-  border: 2px solid var(--border);
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
   text-align: center;
   transition:
-    border-color 0.08s,
-    background-color 0.08s;
+    background-color 0.15s var(--ease),
+    transform 0.15s var(--ease);
 }
 
+/* The chord being played is lit in yellow. */
 .chord-card[data-current='true'] {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 18%, var(--bg-raised));
-  box-shadow: var(--glow);
+  background: var(--yellow);
+  color: var(--on-yellow);
+  transform: scale(1.04);
+}
+
+.chord-card[data-current='true'] .chord-card__roman {
+  color: var(--on-yellow);
 }
 
 /* Chord symbols are case-sensitive (Gm is not GM), so they must not use the all-caps display face. */
@@ -186,6 +192,7 @@
   font-weight: 800;
   text-transform: none;
   font-size: clamp(2rem, 6vw, 3.4rem);
+  letter-spacing: -0.03em;
   line-height: 1;
 }
 
@@ -201,23 +208,27 @@
 /* Turn display (Trade Fours) */
 .turn {
   text-align: center;
-  padding: var(--space-5) var(--space-3);
+  padding: var(--space-6) var(--space-3);
   border-radius: var(--radius);
-  border: 3px solid var(--border);
   background: var(--bg-raised);
-  transition: background-color 0.1s;
+  box-shadow: var(--shadow);
+  transition: background-color 0.2s var(--ease);
 }
 
 .turn[data-who='you'] {
-  border-color: var(--teal);
+  box-shadow:
+    inset 0 0 0 3px var(--yellow),
+    var(--shadow);
 }
 
 .turn[data-who='app'] {
-  border-color: var(--accent);
+  box-shadow:
+    inset 0 0 0 3px var(--accent-text),
+    var(--shadow);
 }
 
 .turn[data-flash='true'] {
-  background: color-mix(in srgb, var(--accent) 30%, var(--bg-raised));
+  background: var(--accent-tint);
 }
 
 .bar-counter {
@@ -230,13 +241,13 @@
 .bar-counter__bar {
   display: flex;
   gap: 3px;
-  padding: 4px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  padding: 5px;
+  background: var(--bg-sunken);
+  border-radius: 8px;
 }
 
 .bar-counter__bar[data-current='true'] {
-  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-text);
 }
 
 .bar-counter__beat {
@@ -247,7 +258,11 @@
 }
 
 .bar-counter__beat[data-on='true'] {
-  background: var(--teal);
+  background: var(--accent);
+}
+
+.bar-counter__beat[data-on='true']:first-child {
+  background: var(--yellow);
 }
 
 /* Timer */
@@ -258,8 +273,10 @@
 .timer__digits {
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 12vw, 8rem);
+  font-weight: 800;
   line-height: 1;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
   color: var(--text);
 }
 
@@ -301,16 +318,15 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 2px solid var(--border);
-  font-weight: 700;
+  background: var(--bg-sunken);
+  font-weight: 600;
 }
 
 .week li[data-done='true'] {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 22%, var(--bg-raised));
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .week li[data-today='true'] {
-  box-shadow: 0 0 0 3px var(--teal);
+  box-shadow: 0 0 0 3px var(--yellow);
 }

@@ -51,7 +51,7 @@ export function ProfileForm({ profile, onChange }: Props) {
               data-selected={profile.mainInstrument === i.id}
               style={
                 profile.mainInstrument === i.id
-                  ? { borderColor: 'var(--teal)', background: 'var(--bg-sunken)' }
+                  ? { background: 'var(--yellow)', color: 'var(--on-yellow)' }
                   : undefined
               }
               onClick={() => setMain(i.id)}

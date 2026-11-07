@@ -28,7 +28,7 @@ const style = (page: Page, selector: string) =>
 
 /**
  * Chord symbols and Roman numerals are case-sensitive: Gm is minor and GM is not a chord. The display
- * face (Bebas Neue) has only capitals, so anything musical must avoid it and avoid uppercasing.
+ * face (Duera) is for headings only, so anything musical must avoid it and avoid uppercasing.
  */
 test.describe('case-sensitive music text keeps its case', () => {
   test('chord names on the Chord Dealer', async ({ page }) => {
@@ -39,7 +39,7 @@ test.describe('case-sensitive music text keeps its case', () => {
     const names = await page.locator('.chord-card__name').allTextContents();
     expect(names.some((n) => /m$/.test(n))).toBe(true); // a minor chord is dealt in a minor key
     const s = await style(page, '.chord-card__name');
-    expect(s.family).not.toMatch(/bebas/i);
+    expect(s.family).not.toMatch(/duera/i);
     expect(s.transform).toBe('none');
     // What is on screen is what was dealt: the minor "m" is rendered as typed.
     const roman = await style(page, '.chord-card__roman');
@@ -51,14 +51,14 @@ test.describe('case-sensitive music text keeps its case', () => {
     await page.keyboard.press('p');
     await expect(page.locator('.dock__chord')).toBeVisible({ timeout: 8000 });
     const s = await style(page, '.dock__chord');
-    expect(s.family).not.toMatch(/bebas/i);
+    expect(s.family).not.toMatch(/duera/i);
     expect(s.transform).toBe('none');
   });
 
   test('the Daily Jam summary, which can contain Roman numerals', async ({ page }) => {
     await ready(page, '#/daily');
     const s = await style(page, '[aria-label="Today\'s challenge"] .prompt');
-    expect(s.family).not.toMatch(/bebas/i);
+    expect(s.family).not.toMatch(/duera/i);
     expect(s.transform).toBe('none');
   });
 });

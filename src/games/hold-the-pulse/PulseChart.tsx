@@ -29,7 +29,7 @@ export function PulseChart({ points, beats }: Props) {
         style={{ width: '100%', maxWidth: 520, height: 'auto' }}
       >
         <rect x="0" y="0" width={W} height={H} rx="8" fill="var(--bg-sunken)" />
-        <line x1={PAD} x2={W - PAD} y1={H / 2} y2={H / 2} stroke="var(--teal)" strokeWidth="2" />
+        <line x1={PAD} x2={W - PAD} y1={H / 2} y2={H / 2} stroke="var(--accent-text)" strokeWidth="2" />
         <text x={PAD} y={PAD - 2} fontSize="9" fill="var(--text-muted)">
           late
         </text>

@@ -12,7 +12,7 @@
   padding: var(--space-3) var(--space-4);
   background: var(--accent);
   color: var(--on-accent);
-  border-radius: var(--radius-sm);
+  border-radius: var(--pill);
 }
 
 .skip-link:focus {
@@ -27,16 +27,19 @@
   align-items: center;
   gap: var(--space-3);
   padding: var(--space-2) var(--space-4);
-  background: color-mix(in srgb, var(--bg) 96%, transparent);
-  border-bottom: 1px solid var(--border);
+  /* A translucent material over the content, with a hairline instead of a border. */
+  background: var(--material);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 0.5px 0 var(--separator);
 }
 
 .header__brand {
   font-family: var(--font-display);
-  font-size: 1.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
   text-decoration: none;
   margin-right: auto;
 }
@@ -115,24 +118,25 @@
 
 .prompt {
   font-family: var(--font-display);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
   font-size: clamp(2.5rem, 8vw, 5rem);
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* Home */
 .hero {
   text-align: center;
-  padding: var(--space-6) 0 var(--space-5);
+  padding: var(--space-7) 0 var(--space-5);
 }
 
 .hero p {
   color: var(--text-muted);
   max-width: 34rem;
   margin: 0 auto var(--space-5);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 .grid {
@@ -154,29 +158,39 @@
   color: inherit;
   text-decoration: none;
   background: var(--bg-raised);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
   transition:
-    border-color 0.12s,
-    transform 0.12s;
+    box-shadow 0.3s var(--ease),
+    transform 0.3s var(--ease);
 }
 
 .game-card:hover {
-  border-color: var(--teal);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-3px);
+}
+
+.game-card:active {
+  transform: scale(0.98);
 }
 
 .game-card__icon {
-  font-size: 1.8rem;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--accent-tint);
+  font-size: 1.5rem;
   line-height: 1;
 }
 
 .game-card__title {
   font-family: var(--font-display);
-  font-size: 1.6rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  line-height: 1.05;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
 }
 
 .game-card__desc {
@@ -197,7 +211,25 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
-  border-color: var(--accent);
+  background: var(--yellow);
+  color: var(--on-yellow);
+}
+
+.daily-card .muted {
+  color: color-mix(in srgb, var(--on-yellow) 75%, transparent);
+}
+
+.daily-card .btn {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.daily-card .btn:hover {
+  background: var(--accent-strong);
+}
+
+.daily-card .btn--primary {
+  box-shadow: none;
 }
 
 .daily-card h2 {
@@ -207,7 +239,13 @@
 .streak {
   font-family: var(--font-display);
   font-size: 2.2rem;
-  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--accent-text);
+}
+
+.daily-card .streak {
+  color: var(--on-yellow);
 }
 
 /* Transport dock */
@@ -217,9 +255,10 @@
   right: 0;
   bottom: 0;
   z-index: 30;
-  background: var(--bg-raised);
-  border-top: 1px solid var(--border);
-  box-shadow: 0 -6px 24px rgb(0 0 0 / 30%);
+  background: var(--material);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 -0.5px 0 var(--separator);
 }
 
 .dock__bar {
@@ -240,10 +279,12 @@
 }
 
 .dock__bpm input {
-  width: 4.5rem;
+  width: 5.5rem;
+  padding: 0;
   text-align: center;
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.35rem;
+  font-weight: 700;
 }
 
 .dock__pulse {
@@ -257,17 +298,19 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--border);
+  background: var(--bg-sunken);
+  box-shadow: inset 0 0 0 1px var(--border);
 }
 
 .pulse-dot[data-on='true'] {
-  background: var(--teal);
-  box-shadow: 0 0 10px var(--teal);
+  background: var(--accent);
+  box-shadow: none;
 }
 
+/* The downbeat is yellow. */
 .pulse-dot[data-on='true'][data-accent='true'] {
-  background: var(--accent);
-  box-shadow: 0 0 12px var(--accent);
+  background: var(--yellow);
+  box-shadow: 0 0 0 3px rgb(255 214 10 / 35%);
 }
 
 .dock__spacer {
@@ -303,7 +346,7 @@
   display: grid;
   place-items: center;
   padding: var(--space-4);
-  background: rgb(0 0 0 / 65%);
+  background: var(--scrim);
   overflow-y: auto;
 }
 
@@ -322,6 +365,7 @@
 .choice-grid .btn {
   justify-content: flex-start;
   text-align: left;
+  border-radius: var(--radius-sm);
 }
 
 .shortcut-table {
@@ -333,7 +377,7 @@
 .shortcut-table td {
   padding: var(--space-2) var(--space-2);
   text-align: left;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--separator);
 }
 
 .row {
@@ -361,9 +405,10 @@
   font-family: var(--font-ui);
   font-weight: 800;
   text-transform: none;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
   line-height: 1;
-  color: var(--accent);
+  color: var(--accent-text);
   min-width: 3ch;
 }
 
@@ -375,26 +420,26 @@
 }
 
 .stat-grid div {
-  padding: var(--space-3);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  padding: var(--space-4) var(--space-3);
+  background: var(--bg-sunken);
+  border-radius: var(--radius-md);
   text-align: center;
 }
 
 .stat-grid dt {
   color: var(--text-muted);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 .stat-grid dd {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 2.4rem;
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   line-height: 1.1;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .plain-list {
@@ -410,7 +455,7 @@
   justify-content: space-between;
   gap: var(--space-3);
   padding-bottom: var(--space-2);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--separator);
 }
 
 .tips {
@@ -430,6 +475,6 @@
   font-family: var(--font-ui);
   font-weight: 800;
   text-transform: none;
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
   line-height: 1.25;
 }

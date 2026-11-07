@@ -125,6 +125,18 @@ unit tests, build and end-to-end tests. Pushes to `main` then publish `dist/` to
 One-time setup: in the repository's **Settings > Pages**, set **Source** to **GitHub Actions**. The site is
 then served at `https://<username>.github.io/solo-jam-room/`. The base path is set in `vite.config.ts`.
 
+## Typography and colour
+
+The palette is purple (interactive), yellow ("now" and "selected") and white, in light and dark, following
+Apple's Human Interface Guidelines: large sentence-case titles, pill buttons, soft cards and translucent bars.
+Tokens live in .
+
+Body text uses **Funnel Sans** (bundled, SIL Open Font License). Headings use **Duera**, which is listed first in
+ and falls back to Funnel Sans until its files are added. Duera is free for personal use only,
+so a public site needs a commercial licence from the designer; the font files are not in this repository. Once
+licensed, put the  files in  and add to :
+
+\
 ## Content rules
 
 All written content is original to this project. Genre Flip uses only public-domain melodies, shown by
