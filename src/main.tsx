@@ -6,6 +6,7 @@ import '@fontsource-variable/funnel-sans/wght.css';
 import './styles/global.css';
 import './styles/layout.css';
 import './styles/games.css';
+import './styles/home.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

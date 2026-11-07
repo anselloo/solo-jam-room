@@ -20,7 +20,19 @@ const ROUTES = [
 const TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 
 async function scan(page: Page) {
-  const results = await new AxeBuilder({ page }).withTags(TAGS).analyze();
+  // Entrance animations fade content in; judge contrast on the finished state, not mid-fade.
+  // Scroll-driven reveals never finish on their own, so those are removed to show the settled style.
+  await page.evaluate(async () => {
+    const running = document
+      .getAnimations()
+      .filter((x) => x.effect?.getTiming().iterations !== Infinity);
+    for (const x of running) {
+      if (x.timeline instanceof DocumentTimeline) await x.finished.catch(() => undefined);
+      else x.cancel();
+    }
+  });
+  // The hero preview is aria-hidden decoration that loops forever, so it is not measured.
+  const results = await new AxeBuilder({ page }).withTags(TAGS).exclude('.stage').analyze();
   return results.violations.map((v) => ({
     id: v.id,
     impact: v.impact,

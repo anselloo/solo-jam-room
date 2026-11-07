@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { HowTo } from '../../components/HowTo';
 import { genreById, GENRES } from '../../audio/band/grooves';
 import { getContext } from '../../audio/engine';
 import { msUntil } from '../../audio/scheduler';
@@ -153,6 +154,7 @@ export function GenreFlipPage() {
     <section className="stack">
       <FocusView>
         <h1>Genre flip</h1>
+        <HowTo game="genre-flip" />
         {flip ? (
           <div className="turn" data-who="app" data-flash={timeUp}>
             <p className="muted">Play this tune</p>

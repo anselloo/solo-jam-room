@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { HowTo } from '../../components/HowTo';
 import { genreById } from '../../audio/band/grooves';
 import { getContext } from '../../audio/engine';
 import { playChime } from '../../audio/sounds';
@@ -171,6 +172,7 @@ export function SongSprintPage() {
   return (
     <section className="stack">
       <h1>Song sprint</h1>
+      <HowTo game="song-sprint" />
 
       {phase === 'down' && (
         <div className="card stack" aria-live="polite">

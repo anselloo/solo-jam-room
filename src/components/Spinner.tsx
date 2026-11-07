@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 interface Props {
   label: string;
+  /** A few words saying what this reel decides. */
+  hint?: string;
   /** The settled value. */
   value: string;
   /** Values flickered through while spinning. */
@@ -12,7 +14,7 @@ interface Props {
 }
 
 /** One reel: shows a flickering value while spinning, with a lock toggle. */
-export function Spinner({ label, value, options, spinning, locked, onToggleLock }: Props) {
+export function Spinner({ label, hint, value, options, spinning, locked, onToggleLock }: Props) {
   const [shown, setShown] = useState(value);
 
   useEffect(() => {
@@ -27,6 +29,7 @@ export function Spinner({ label, value, options, spinning, locked, onToggleLock 
   return (
     <div className="reel" data-locked={locked}>
       <span className="reel__label">{label}</span>
+      {hint && <span className="reel__hint">{hint}</span>}
       <div className="reel__window" data-spinning={spinning} aria-hidden={spinning}>
         {text || '–'}
       </div>

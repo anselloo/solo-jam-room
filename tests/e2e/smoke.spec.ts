@@ -98,7 +98,7 @@ test.describe('each game opens and responds to its primary action', () => {
   test('Hold the Pulse', async ({ page }) => {
     await page.getByRole('link', { name: 'Hold the Pulse' }).click();
     await page.getByRole('button', { name: 'Start', exact: true }).click();
-    await expect(page.getByText('LISTEN')).toBeVisible();
+    await expect(page.getByText('LISTEN', { exact: true })).toBeVisible();
   });
 
   test('Genre Flip', async ({ page }) => {

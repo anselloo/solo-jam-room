@@ -9,6 +9,7 @@ import { SongSprintPage } from '../games/song-sprint/SongSprintPage';
 import { RoulettePage } from '../games/roulette/RoulettePage';
 import { TradeFoursPage } from '../games/trade-fours/TradeFoursPage';
 import type { GameInfo } from '../routes';
+import { Glossary } from '../components/Glossary';
 import { Placeholder } from './Placeholder';
 
 /** Games that have been built. Anything else shows a placeholder. */
@@ -26,7 +27,15 @@ const IMPLEMENTED: Record<string, ComponentType> = {
 
 export function GamePage({ game }: { game: GameInfo }) {
   const Impl = IMPLEMENTED[game.path];
-  if (Impl) return <Impl />;
+  if (Impl)
+    return (
+      <>
+        <Impl />
+        <div className="glossary-wrap">
+          <Glossary />
+        </div>
+      </>
+    );
   return (
     <Placeholder title={game.title} icon={game.icon}>
       <p>{game.blurb}</p>

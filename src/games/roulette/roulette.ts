@@ -20,6 +20,16 @@ export const REEL_LABELS: Record<ReelId, string> = {
   wildcard: 'Wildcard',
 };
 
+/** A few words under each reel that say what it decides. */
+export const REEL_HINTS: Record<ReelId, string> = {
+  key: 'your home note',
+  mode: 'the scale’s mood',
+  tempo: 'speed in BPM',
+  signature: 'beats per bar',
+  groove: 'band style',
+  wildcard: 'a twist',
+};
+
 export interface DifficultyConfig {
   /** Allowed tonic pitch classes. */
   keys: number[];
@@ -60,6 +70,17 @@ export const MODE_NAMES: Partial<Record<ScaleId, string>> = {
   lydian: 'Lydian',
   mixolydian: 'Mixolydian',
   locrian: 'Locrian',
+};
+
+/** One line on what each mode sounds like, for people who have never heard the word. */
+export const MODE_MOODS: Partial<Record<ScaleId, string>> = {
+  major: 'bright and happy',
+  minor: 'darker and more serious',
+  dorian: 'minor with a hopeful lift',
+  phrygian: 'dark and Spanish-sounding',
+  lydian: 'dreamy and floating',
+  mixolydian: 'relaxed and bluesy, a rock favourite',
+  locrian: 'tense and unsettled',
 };
 
 export interface RouletteResult {

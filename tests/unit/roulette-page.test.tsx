@@ -37,7 +37,7 @@ describe('Jam Roulette page', () => {
     await user.keyboard(' ');
     const result = screen.getByLabelText('Result');
     expect(within(result).getByText(/BPM/)).toBeTruthy();
-    expect(within(result).getByText(/Scale:/)).toBeTruthy();
+    expect(within(result).getByText(/Play these notes/)).toBeTruthy();
     expect(screen.getAllByRole('button', { name: /play/i }).length).toBeGreaterThanOrEqual(2);
   });
 

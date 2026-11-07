@@ -32,9 +32,9 @@ export function TransportDock() {
           className="btn"
           onClick={() => void t.toggle()}
           aria-pressed={t.running}
-          title="Play / stop (P)"
+          title="Play or stop the backing band (P)"
         >
-          {t.running ? '■ Stop' : '▶ Play'}
+          {t.running ? '■ Stop' : '▶ Play band'}
         </button>
 
         <div className="dock__bpm" role="group" aria-label="Tempo">
@@ -67,11 +67,11 @@ export function TransportDock() {
           >
             +
           </button>
-          <span className="muted">BPM</span>
+          <span className="muted">BPM (speed)</span>
         </div>
 
         <button type="button" className="btn" onClick={() => t.tap()} title="Tap tempo (T)">
-          Tap
+          Tap tempo
         </button>
 
         <label className="sr-only" htmlFor="time-signature">
@@ -118,7 +118,7 @@ export function TransportDock() {
           aria-controls="band-mixer"
           onClick={() => setOpen((o) => !o)}
         >
-          Mixer {open ? '▾' : '▴'}
+          Band mixer {open ? '▾' : '▴'}
         </button>
       </div>
 

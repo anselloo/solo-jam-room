@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { HowTo } from '../../components/HowTo';
 import { genreById } from '../../audio/band/grooves';
 import { getContext } from '../../audio/engine';
 import { msUntil } from '../../audio/scheduler';
@@ -20,6 +21,8 @@ import {
   MODE_NAMES,
   NO_LOCKS,
   REELS,
+  MODE_MOODS,
+  REEL_HINTS,
   REEL_LABELS,
   backingFor,
   describeResult,
@@ -216,11 +219,13 @@ export function RoulettePage() {
     <section className="stack">
       <FocusView>
         <h1>Jam Roulette</h1>
+        <HowTo game="roulette" />
         <div className="reels">
           {REELS.filter(visible).map((reel) => (
             <Spinner
               key={reel}
               label={REEL_LABELS[reel]}
+              hint={REEL_HINTS[reel]}
               value={displayValue(result, reel)}
               options={optionsFor(reel)}
               spinning={!settled.has(reel)}
@@ -258,7 +263,10 @@ export function RoulettePage() {
               <span className="chip">{result.signature}</span>{' '}
               <span className="chip">{genreById(result.genre)?.name}</span>
             </p>
-            <p className="muted">Scale: {scaleNotesOf(result).join(' – ')}</p>
+            <p>
+              A {MODE_MOODS[result.mode] ?? ''} sound. Play these notes:{' '}
+              <strong>{scaleNotesOf(result).join(' ')}</strong>
+            </p>
             {result.wildcard && (
               <p>
                 <span className="chip">Wildcard</span> {result.wildcard.text}
@@ -291,7 +299,7 @@ export function RoulettePage() {
             checked={wildcardOn}
             onChange={(e) => setWildcardOn(e.target.checked)}
           />
-          Wildcard (draw a constraint card)
+          Wildcard: add a surprise rule to play by
         </label>
         <div className="field">
           <label htmlFor="jam-length">Jam length</label>

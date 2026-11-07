@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { HowTo } from '../../components/HowTo';
 import { GROOVES, genreById, GENRES } from '../../audio/band/grooves';
 import { getContext } from '../../audio/engine';
 import { msUntil } from '../../audio/scheduler';
@@ -219,6 +220,7 @@ export function MissingMemberPage() {
     <section className="stack">
       <FocusView>
         <h1>Missing member</h1>
+        <HowTo game="missing-member" />
         <div
           className="turn"
           data-who={phase === 'playing' ? 'app' : undefined}

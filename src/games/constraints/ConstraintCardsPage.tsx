@@ -1,4 +1,5 @@
 import { Card } from '../../components/Card';
+import { HowTo } from '../../components/HowTo';
 import { FocusView } from '../../components/FocusView';
 import { useAction } from '../../state/shortcuts';
 import { CATEGORIES, CATEGORY_LABELS, type ConstraintCategory } from './deck';
@@ -21,6 +22,7 @@ export function ConstraintCardsPage() {
     <section className="stack">
       <FocusView>
         <h1>Constraint cards</h1>
+        <HowTo game="constraints" />
         <Card flipped={!!c.current} back={<span className="flip__logo">Draw</span>}>
           {c.current && (
             <div className="constraint">

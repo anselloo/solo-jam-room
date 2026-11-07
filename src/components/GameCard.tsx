@@ -1,9 +1,10 @@
 import { href } from '../router';
 import type { GameInfo } from '../routes';
 
-export function GameCard({ game }: { game: GameInfo }) {
+export function GameCard({ game, featured = false }: { game: GameInfo; featured?: boolean }) {
   return (
-    <a className="game-card" href={href(game.path)}>
+    <a className="game-card" href={href(game.path)} data-featured={featured}>
+      {featured && <span className="game-card__badge">Start here</span>}
       <span className="game-card__icon" aria-hidden="true">
         {game.icon}
       </span>

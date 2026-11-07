@@ -98,6 +98,6 @@ describe('Daily Jam page', () => {
     window.location.hash = '#/';
     render(<App />);
     expect(screen.getByLabelText('Current streak: 0 days')).toBeTruthy();
-    expect(screen.getByText(dailyChallenge('2026-06-10').summary)).toBeTruthy();
+    expect(screen.getByText(`Today: ${dailyChallenge('2026-06-10').summary}`)).toBeTruthy();
   });
 });

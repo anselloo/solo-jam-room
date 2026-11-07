@@ -29,9 +29,9 @@ export function Header({ atHome }: { atHome: boolean }) {
           className="btn"
           aria-pressed={focus}
           onClick={toggleFocus}
-          title="Focus Mode (F)"
+          title="Focus mode: bigger text for reading from a music stand (F)"
         >
-          Focus
+          Focus mode
         </button>
         <button
           type="button"

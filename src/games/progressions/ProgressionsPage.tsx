@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { HowTo } from '../../components/HowTo';
 import { getContext } from '../../audio/engine';
 import { msUntil } from '../../audio/scheduler';
 import { useTransport } from '../../audio/transport';
@@ -151,6 +152,7 @@ export function ProgressionsPage() {
     <section className="stack">
       <FocusView>
         <h1>Chord dealer</h1>
+        <HowTo game="progressions" />
         {current ? (
           <>
             <p className="prompt" style={{ textAlign: 'center' }}>

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { HowTo } from '../../components/HowTo';
 import { getContext } from '../../audio/engine';
 import { barDuration, msUntil } from '../../audio/scheduler';
 import { playChime } from '../../audio/sounds';
@@ -232,6 +233,7 @@ export function HoldThePulsePage() {
     <section className="stack">
       <FocusView>
         <h1>Hold the pulse</h1>
+        <HowTo game="hold-the-pulse" />
         <div
           className="turn"
           data-who={phase === 'playing' ? (silent ? 'you' : 'app') : undefined}

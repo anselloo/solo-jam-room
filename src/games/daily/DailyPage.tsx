@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { HowTo } from '../../components/HowTo';
 import { grooveById, genreById } from '../../audio/band/grooves';
 import { useTransport } from '../../audio/transport';
 import { announce } from '../../components/announce';
@@ -63,6 +64,7 @@ export function DailyPage() {
         <span aria-hidden="true">📅 </span>Daily Jam
       </h1>
       <p className="muted">One challenge a day, the same for everyone who opens the site today.</p>
+      <HowTo game="daily" />
 
       <div className="card stack" aria-label="Today's challenge">
         <span className="chip">{challenge.title}</span>

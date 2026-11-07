@@ -23,7 +23,7 @@
   /* Purple is the interactive colour: filled for primary actions, as text for links. */
   --accent: #7c3aed;
   --accent-strong: #6a2fd4;
-  --accent-text: #6a2fd4;
+  --accent-text: #5b21b6;
   --accent-tint: rgb(124 58 237 / 11%);
   --on-accent: #ffffff;
   /* Yellow marks "now" and "selected": the current chord, the downbeat, a toggled control. It is

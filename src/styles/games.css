@@ -330,3 +330,89 @@
 .week li[data-today='true'] {
   box-shadow: 0 0 0 3px var(--yellow);
 }
+
+/* "How this works" and the glossary */
+.howto {
+  border-radius: var(--radius);
+  background: var(--accent-tint);
+  overflow: hidden;
+}
+
+.howto__summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  padding: 0 var(--space-4);
+  font-weight: 700;
+  color: var(--accent-text);
+  cursor: pointer;
+  list-style: none;
+}
+
+.howto__summary::-webkit-details-marker {
+  display: none;
+}
+
+.howto__summary::before {
+  content: '';
+  width: 0.55em;
+  height: 0.55em;
+  border-right: 2.5px solid currentcolor;
+  border-bottom: 2.5px solid currentcolor;
+  transform: rotate(-45deg);
+  transition: transform 0.25s var(--ease);
+}
+
+.howto[open] > .howto__summary::before {
+  transform: rotate(45deg);
+}
+
+.howto__body {
+  margin: 0;
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.howto__goal {
+  margin: 0 0 var(--space-3);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.howto__steps {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-3);
+  padding-left: 1.4rem;
+}
+
+.howto__tip {
+  margin: 0;
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--bg-raised);
+}
+
+.glossary-wrap {
+  margin-top: var(--space-5);
+}
+
+.glossary__list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.glossary__list dt {
+  font-weight: 700;
+}
+
+.glossary__list dd {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.reel__hint {
+  margin-top: -6px;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}

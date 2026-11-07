@@ -1,0 +1,486 @@
+/* Home page: a lively hero, a plain "how it works", and the game grid. Motion uses transform and
+   opacity only. The global reduced-motion rule collapses every animation to its final frame. */
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.88) rotate(-3deg);
+  }
+  70% {
+    transform: scale(1.03) rotate(0.5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drift-a {
+  to {
+    transform: translate(40px, 30px) scale(1.12);
+  }
+}
+
+@keyframes drift-b {
+  to {
+    transform: translate(-36px, -24px) scale(1.08);
+  }
+}
+
+@keyframes bob {
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+@keyframes eq {
+  0%,
+  100% {
+    transform: scaleY(0.2);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  12% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+}
+
+@keyframes note-float {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotate(-8deg);
+  }
+  20%,
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-90px) rotate(10deg);
+  }
+}
+
+/* Each reel slides through four words and returns to the first. */
+@keyframes reel {
+  0%,
+  18% {
+    transform: translateY(0);
+  }
+  25%,
+  43% {
+    transform: translateY(-2.4rem);
+  }
+  50%,
+  68% {
+    transform: translateY(-4.8rem);
+  }
+  75%,
+  93% {
+    transform: translateY(-7.2rem);
+  }
+  100% {
+    transform: translateY(-9.6rem);
+  }
+}
+
+.home {
+  overflow-x: clip;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+  padding: var(--space-6) 0 var(--space-7);
+  text-align: left;
+}
+
+@media (min-width: 880px) {
+  .hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    padding-top: var(--space-7);
+  }
+}
+
+.hero__bg {
+  position: absolute;
+  inset: -20% -10% 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__blob {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hero__blob--purple {
+  top: 0;
+  right: 4%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgb(124 58 237 / 32%), transparent 68%);
+  animation: drift-a 9s ease-in-out infinite alternate;
+}
+
+.hero__blob--yellow {
+  bottom: 6%;
+  left: 2%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgb(255 214 10 / 34%), transparent 68%);
+  animation: drift-b 11s ease-in-out infinite alternate;
+}
+
+.hero__copy,
+.stage {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__copy > * {
+  animation: rise 0.7s var(--ease) both;
+}
+
+.hero__copy > :nth-child(2) {
+  animation-delay: 0.08s;
+}
+.hero__copy > :nth-child(3) {
+  animation-delay: 0.16s;
+}
+.hero__copy > :nth-child(4) {
+  animation-delay: 0.24s;
+}
+.hero__copy > :nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  margin: 0 0 var(--space-3);
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--pill);
+  background: var(--accent-tint);
+  color: var(--accent-text);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0 0 var(--space-4);
+  font-size: clamp(3rem, 9vw, 5.75rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+/* A yellow highlight behind "Jam" that pops in. */
+.hero__mark {
+  padding: 0 0.08em;
+  color: var(--on-yellow);
+  background: var(--yellow);
+  border-radius: 0.12em;
+  animation: pop-in 0.6s 0.5s var(--ease) both;
+}
+
+.hero p.hero__lead {
+  max-width: 34rem;
+  margin: 0 0 var(--space-5);
+  color: var(--text-muted);
+  font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+  line-height: 1.4;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.hero p.hero__fine {
+  max-width: 30rem;
+  margin: var(--space-4) 0 0;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+/* The animated preview card */
+.stage {
+  justify-self: center;
+  width: min(100%, 380px);
+  animation: bob 6s ease-in-out infinite;
+}
+
+.stage__card {
+  padding: var(--space-5);
+  border-radius: 28px;
+  background: var(--bg-raised);
+  box-shadow: var(--shadow-lift);
+  animation: pop-in 0.8s 0.2s var(--ease) both;
+}
+
+.stage__title {
+  margin-bottom: var(--space-3);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+.stage__reels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.stage__reel {
+  display: grid;
+  gap: 4px;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  background: var(--bg-sunken);
+  text-align: center;
+}
+
+.stage__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.stage__window {
+  display: block;
+  height: 2.4rem;
+  overflow: hidden;
+}
+
+.stage__strip {
+  display: block;
+  animation: reel 10s var(--ease) infinite;
+  animation-delay: var(--d);
+}
+
+.stage__strip span {
+  display: block;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--accent-text);
+  white-space: nowrap;
+}
+
+.stage__eq {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 5px;
+  height: 64px;
+  margin-top: var(--space-4);
+}
+
+.stage__eq span {
+  flex: 1;
+  height: 100%;
+  border-radius: 6px;
+  background: var(--accent);
+  transform-origin: bottom;
+  animation: eq calc(0.7s + (var(--i) * 0.09s)) ease-in-out infinite;
+  animation-delay: calc(var(--i) * -0.17s);
+}
+
+.stage__eq span:nth-child(3n) {
+  background: var(--yellow);
+}
+
+.stage__beats {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.stage__beats span {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: beat 2s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.5s);
+}
+
+.stage__beats span:first-child {
+  background: var(--yellow);
+}
+
+.stage__note {
+  position: absolute;
+  z-index: 2;
+  font-size: 2rem;
+  color: var(--accent-text);
+  opacity: 0;
+  animation: note-float 5s ease-in infinite;
+}
+
+.stage__note--1 {
+  top: 10%;
+  left: -6%;
+}
+.stage__note--2 {
+  top: 30%;
+  right: -4%;
+  color: var(--text);
+  animation-delay: 1.6s;
+}
+.stage__note--3 {
+  bottom: 18%;
+  left: 2%;
+  animation-delay: 3.1s;
+}
+
+/* How it works */
+.how {
+  margin-bottom: var(--space-6);
+}
+
+.how h2 {
+  margin-bottom: var(--space-4);
+}
+
+.how__steps {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.how__step {
+  position: relative;
+  padding: var(--space-5);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s var(--ease);
+}
+
+.how__step:hover {
+  transform: translateY(-4px);
+}
+
+.how__step h3 {
+  margin: var(--space-3) 0 var(--space-1);
+}
+
+.how__step p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.how__num {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--on-yellow);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  transition: transform 0.4s var(--ease);
+}
+
+.how__step:hover .how__num {
+  transform: rotate(-10deg) scale(1.12);
+}
+
+/* Game grid */
+.home__heading {
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-1);
+}
+
+.home__sub {
+  margin: 0 0 var(--space-2);
+}
+
+.game-card {
+  position: relative;
+}
+
+.game-card[data-featured='true'] {
+  box-shadow:
+    0 0 0 2px var(--accent),
+    var(--shadow);
+}
+
+.game-card__badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--pill);
+  background: var(--yellow);
+  color: var(--on-yellow);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.game-card__icon {
+  transition: transform 0.4s var(--ease);
+}
+
+.game-card:hover .game-card__icon {
+  transform: rotate(-8deg) scale(1.15);
+}
+
+/* Entrance: staggered on load, or driven by scroll where the browser supports it. */
+.reveal {
+  animation: rise 0.7s var(--ease) both;
+  animation-delay: calc(0.35s + var(--i, 0) * 0.08s);
+}
+
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation-delay: 0s;
+    animation-timeline: view();
+    animation-range: entry 0% entry 45%;
+  }
+}
+
+/* Focus Mode shows only the prompt. */
+[data-focus='true'] .howto,
+[data-focus='true'] .glossary-wrap {
+  display: none;
+}

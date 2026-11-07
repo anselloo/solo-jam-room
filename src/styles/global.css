@@ -94,7 +94,7 @@ textarea {
 }
 
 .btn:hover {
-  background: color-mix(in srgb, var(--accent) 20%, var(--bg-raised));
+  background: color-mix(in srgb, var(--accent) 16%, var(--bg-raised));
 }
 
 .btn:active {
