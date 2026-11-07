@@ -35,6 +35,7 @@ test('works with no signal after the first load', async ({ page, context }) => {
 
   // A game still works offline, including its data and the chord theory.
   await page.getByRole('link', { name: 'Chord Dealer' }).click();
+  await expect(page.getByRole('heading', { level: 1, name: /chord dealer/i })).toBeVisible();
   await page.keyboard.press('Space');
   await expect(page.getByRole('list', { name: /chord progression/i })).toBeVisible();
   await context.setOffline(false);

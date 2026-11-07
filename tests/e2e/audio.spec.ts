@@ -89,6 +89,7 @@ test('Jam Roulette plays the band at the dealt tempo, with the click on the beat
   await tapAudio(page);
   await onboard(page);
   await page.getByRole('link', { name: 'Jam Roulette' }).click();
+  await expect(page.getByRole('heading', { level: 1, name: /Jam Roulette/i })).toBeVisible();
   await page.keyboard.press('Space');
   await expect(page.getByLabel('Result')).toBeVisible({ timeout: 5_000 });
   const bpmText = await page.getByLabel('Result').locator('.chip').first().textContent();

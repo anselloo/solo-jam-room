@@ -57,6 +57,7 @@ test.describe('each game opens and responds to its primary action', () => {
 
   test('Jam Roulette', async ({ page }) => {
     await page.getByRole('link', { name: 'Jam Roulette' }).click();
+    await expect(page.getByRole('heading', { level: 1, name: 'Jam Roulette' })).toBeVisible();
     await page.keyboard.press('Space');
     await expect(page.getByLabel('Result')).toBeVisible({ timeout: 5_000 });
     await expect(page.getByLabel('Result')).toContainText('BPM');
@@ -70,6 +71,7 @@ test.describe('each game opens and responds to its primary action', () => {
 
   test('Chord Dealer', async ({ page }) => {
     await page.getByRole('link', { name: 'Chord Dealer' }).click();
+    await expect(page.getByRole('heading', { level: 1, name: /chord dealer/i })).toBeVisible();
     await page.keyboard.press('Space');
     await expect(page.getByRole('list', { name: /chord progression/i })).toBeVisible();
     expect(
@@ -82,6 +84,7 @@ test.describe('each game opens and responds to its primary action', () => {
 
   test('Constraint Cards', async ({ page }) => {
     await page.getByRole('link', { name: 'Constraint Cards' }).click();
+    await expect(page.getByRole('heading', { level: 1, name: /constraint cards/i })).toBeVisible();
     await page.keyboard.press('Space');
     await expect(page.getByRole('button', { name: /draw again/i })).toBeVisible();
   });
