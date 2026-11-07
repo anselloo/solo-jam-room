@@ -129,14 +129,22 @@ then served at `https://<username>.github.io/solo-jam-room/`. The base path is s
 
 The palette is purple (interactive), yellow ("now" and "selected") and white, in light and dark, following
 Apple's Human Interface Guidelines: large sentence-case titles, pill buttons, soft cards and translucent bars.
-Tokens live in .
+Tokens live in `src/styles/tokens.css`.
 
 Body text uses **Funnel Sans** (bundled, SIL Open Font License). Headings use **Duera**, which is listed first in
- and falls back to Funnel Sans until its files are added. Duera is free for personal use only,
+`--font-display` and falls back to Funnel Sans until its files are added. Duera is free for personal use only,
 so a public site needs a commercial licence from the designer; the font files are not in this repository. Once
-licensed, put the  files in  and add to :
+licensed, put the `.woff2` files in `public/fonts/` and add this to `src/styles/global.css`:
 
-\
+```css
+@font-face {
+  font-family: 'Duera';
+  src: url('/solo-jam-room/fonts/Duera-Bold.woff2') format('woff2');
+  font-weight: 700 800;
+  font-display: swap;
+}
+```
+
 ## Content rules
 
 All written content is original to this project. Genre Flip uses only public-domain melodies, shown by
